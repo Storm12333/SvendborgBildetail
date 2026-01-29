@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Udvendig bilvask i Svendborg | Svendborg Bildetail" />
+<meta property="og:description" content="Professionel bilpleje i Svendborg. Udvendig vask, indvendig rengøring og fuld bildetailing. Vi kommer til dig – få din bil til at skinne igen." />
+  <title>Udvendig bilvask i Svendborg | Svendborg Bildetail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #679dc1;
+      color: #ffffff;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #3d527a;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Main tekst med plads til venstre billeder --- */
+    main {
+      padding-left: clamp(260px, 35vw, 420px);
+      padding-right: 20px;
+      padding-top: 40px;
+      padding-bottom: 70px; /* plads til footer */
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tilbageknap {
+      display: inline-block; 
+      padding: 20px 40px; 
+      background-color: #1e90ff; 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tilbageknap:hover {
+      background-color: #0b7de7;
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
+      z-index: 999;
+    }
+
+    footer {
+      background: #2d446c;
+      color: white;
+      text-align: center;
+      padding: 12px 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 0.9em;
+      z-index: 2;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-content a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      line-height: 0;
+    }
+
+    .logo {
+      height: 120px;
+      width: auto;
+      display: block;
+      position: absolute;
+      left: 20px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    .header-text p {
+      margin: 0;
+      text-align: center;
+    }
+
+.venstre-billeder {
+  position: absolute;
+  top: 40px;
+  left: 20px;              /* ← i stedet for right:1200px */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1;
+}
+
+    .venstre-billeder img {
+      width: 350px;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .punktliste {
+      list-style-type: disc;
+      margin-left: 0;
+      padding-left: 20px;
+      font-size: 20px;
+    }
+
+    .mailknap {
+      display: inline-block;
+      padding: 20px 40px; 
+      background-color: #1e90ff; 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 20px;
+    }
+
+    .mailknap:hover{
+      background-color: #0b7de7;
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
+      z-index: 999;
+    }
+
+    .knapcontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+ @media (max-width: 1200px) {
+  .venstre-billeder img {
+    width: 280px;
+  }
+
+  main {
+    padding-left: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .venstre-billeder img {
+    width: 220px;
+  }
+
+  main {
+    padding-left: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .venstre-billeder {
+    position: relative;
+    flex-direction: row;
+    margin-bottom: 20px;
+    left: 0;
+    top: 0;
+  }
+
+  .venstre-billeder img {
+    width: 120px;
+  }
+
+  main {
+    padding-left: 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    position: static;      /* ← VIGTIGSTE LINJE */
+    margin-bottom: 12px;   /* luft mellem logo og tekst */
+    height: 70px;
+  }
+
+  .header-text h1 {
+    font-size: 1.6em;
+  }
+
+  .header-text p {
+    font-size: 1em;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
+      </a>
+      <div class="header-text">
+        <h1>Svendborg Bildetail</h1>
+        <p>Vi giver din bil nyt liv!</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="services.html">Services</a>
+      <a href="omos.html">Om os</a>
+      <a href="kontakt.html">Kontakt</a>
+       <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="udvendig-vask">
+      <h2>Udvendig vask</h2>
+
+      <div class="venstre-billeder">
+        <img src="Billeder/porsche hjul.jpg" alt="Bil udvendig vask 1">
+        <img src="Billeder/porsche vask.png" alt="Bil udvendig vask 2">
+        <img src="Billeder/forvask.png" alt="Bil udvendig vask 3">
+      </div>
+
+      <h3>Vores udvendige bilvask i Svendborg fjerner snavs, salt og skidt, så din bil igen fremstår ren og velplejet. Vi anvender skånsomme produkter og teknikker, der beskytter lakken og giver et flot resultat.</h3>
+
+      <h3>Vasken inkluderer:</h3>
+      <ul class="punktliste">
+        <li>Afspuling af hele bilen</li>
+        <li>Forvask</li>
+        <li>Grundig håndvask med skånsomme produkter</li>
+        <li>Skylning og aftørring for et pletfrit resultat</li>
+        <li>Vinduesrens</li>
+        <li>Hjul og fælgrens</li>
+      </ul>
+      <h2>Tilkøb:</h2>
+      <ul>
+        <li>Voksbehandling: +75 kr</li>
+      </ul>
+
+      <a href="services.html" class="tilbageknap">Tilbage</a>
+      <div class="knapcontainer">
+      <a href="mailto:svendborgbildetail@gmail.com" class="mailknap">Send os en mail nu, og book en tid</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Svendborg Bildetail</p>
+  </footer>
+
+</body>
+</html>

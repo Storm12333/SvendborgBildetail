@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <title>Professionel bil rengøring i Svendborg | Vores services | Svendborg Bildetail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #679dc1;
+      color: #ffffff;
+    }
+
+    header {
+      background: #3d527a;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 90px; /* plads til den faste footer */
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgb(88, 114, 160);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* default position så z-index virker når vi skruer op på hover */
+      position: relative;
+      z-index: 1;
+    }
+    .card2 {
+      background: rgb(88, 114, 160);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* default position så z-index virker når vi skruer op på hover */
+      position: relative;
+      z-index: 1;
+    }
+    .card3 {
+      background: rgb(88, 114, 160);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 15px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* default position så z-index virker når vi skruer op på hover */
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card:hover {
+        transform: translateY(-8px); /* løft opad */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        z-index: 999; /* placér kortet over footeren */
+    }
+    .card2:hover {
+        transform: translateY(-8px); /* løft opad */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        z-index: 999; /* placér kortet over footeren */
+    }
+    .card3:hover {
+        transform: translateY(-8px); /* løft opad */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        z-index: 999; /* placér kortet over footeren */
+    }
+
+    .card,
+    .card2,
+    .card3 {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    footer {
+      background: #2d446c;
+      color: white;
+      text-align: center;
+      padding: 12px 10px; /* lavere højde */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 0.9em;
+      z-index: 1; /* ligger under hoverede kort */
+    }
+
+    /* Header layout */
+.header-content {
+  display: flex;
+  align-items: center;   /* holder logo og tekst på samme linje */
+  justify-content: center;
+  position: relative;
+}
+
+.header-content a {
+  display: flex;         /* sørger for at link og logo behandles som en blok */
+  align-items: center;   /* centrer logoet lodret */
+  text-decoration: none; /* fjerner underline */
+  line-height: 0;        /* ingen ekstra luft */
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  display: block;        /* fjerner evt. luft under billedet */
+  position: absolute;    /* placerer det til venstre */
+  left: 20px;
+}
+
+
+/* Header tekst centreret */
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.header-text p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    position: static;      /* ← VIGTIGSTE LINJE */
+    margin-bottom: 12px;   /* luft mellem logo og tekst */
+    height: 70px;
+  }
+
+  .header-text h1 {
+    font-size: 1.6em;
+  }
+
+  .header-text p {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <a href="index.html">
+      <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
+    </a>
+
+    <div class="header-text">
+      <h1>Svendborg Bildetail</h1>
+      <p>Vi giver din bil nyt liv!</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="omos.html">Om os</a>
+    <a href="kontakt.html">Kontakt</a>
+       <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+
+  <main>
+    <h1 style="-webkit-text-stroke: 1px rgb(57, 101, 184);">Vi tilbyder en række forskellige services, som passer til et hvert budget.</h1>
+    <section id="services">
+      <h2>Hos Svendborg Bildetail tilbyder vi både mobile rengøringer, hvor vi kører direkte til kunden, men mulighed for rengøring på værksted er der også.</h2>
+      <h2>Vores services</h2>
+      <div class="services">
+
+        <a class="card" href="udvendig-vask.html">
+          <h3>Udvendig vask</h3>
+          <br>
+          <p>Grundig udvendig vask - Forvask, grundig håndvask med autoshampoo, fælg-rens og vinduesrens</p>
+          <p><strong>Fra 299 kr</strong></p>
+        </a>
+
+        <a class="card2" href="interiør-rengøring.html">
+          <h3>Indvendig Rengøring</h3>
+          <p>Voes indvendige bil rengøring indeholder -  Støvsugning, af hele kabinen, rengøring af tæpper / måtter, indvendig pudsning af ruder, aftørring af overflader</p>
+          <p><strong>Fra 549 kr</strong></p>
+        </a>
+
+        <a class="card3" href="full-detail.html">
+          <h3>Full Detail</h3>
+          <p>Kombination af udvendig og indvendig behandling for den komplette oplevelse.</p>
+          <p><strong>Fra 749 kr</strong></p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Svendborg Bildetail</p>
+  </footer>
+</body>
+</html>
