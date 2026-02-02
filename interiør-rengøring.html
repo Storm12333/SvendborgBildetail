@@ -3,43 +3,34 @@
 <head>
   <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Indvendig bil rengøring i Svendborg | Svendborg Bildetail" />
-<meta property="og:description" content="Indvendig bil rengøring - få en bil der føles som ny" />
-  <title>Indvendig bil rengøring i Svendborg | Svendborg Bildetail</title>
+
+  <title>Indvendig bil rengøring i Svendborg | Professionel interiør rengøring</title>
+
+  <meta name="description" content="Indvendig bil rengøring i Svendborg – grundig interiør rengøring, støvsugning, pletfjerning og rene måtter. Få en bil der føles som ny.">
+
+  <meta property="og:title" content="Indvendig bil rengøring i Svendborg">
+  <meta property="og:description" content="Professionel indvendig bilrengøring – ren, frisk og behagelig bil igen.">
+
   <style>
-       body {
+    body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: #679dc1;
       color: #ffffff;
-      position: relative;
-      overflow-x: hidden;
     }
 
     header {
       background: #3d527a;
-      color: white;
       padding: 30px;
       text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    nav {
-      margin-top: 10px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -48,259 +39,175 @@
       text-decoration: underline;
     }
 
-    /* --- Main tekst med plads til venstre billeder --- */
     main {
-      padding-left: clamp(260px, 35vw, 420px);
-      padding-right: 20px;
-      padding-top: 40px;
-      padding-bottom: 70px; /* plads til footer */
       max-width: 900px;
       margin: auto;
-      text-align: left;
-      position: relative;
-      z-index: 2;
+      padding: 80px 20px 120px;
     }
 
-    .tilbageknap {
-      display: inline-block; 
-      padding: 20px 40px; 
-      background-color: #1e90ff; 
-      color: white; 
-      text-decoration: none; 
+    h1 {
+      font-size: 2.6em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      font-size: 2em;
+    }
+
+    h3 {
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    .venstre-billeder {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .venstre-billeder img {
+      width: 33%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 18px 36px;
+      background: #1e90ff;
+      color: white;
+      text-decoration: none;
       border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: fit-content;
+      transition: 0.2s;
     }
 
-    .tilbageknap:hover {
-      background-color: #0b7de7;
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
-      z-index: 999;
+    .cta a:hover {
+      background: #0b7de7;
+      transform: translateY(-6px);
     }
 
     footer {
       background: #2d446c;
-      color: white;
       text-align: center;
-      padding: 12px 10px;
+      padding: 14px;
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      font-size: 0.9em;
-      z-index: 2;
     }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+    @media (max-width: 768px) {
+      .venstre-billeder {
+        flex-direction: column;
+      }
+
+      .venstre-billeder img {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
     }
-
-    .header-content a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      line-height: 0;
-    }
-
-    .logo {
-      height: 120px;
-      width: auto;
-      display: block;
-      position: absolute;
-      left: 20px;
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.5em;
-      text-align: center;
-    }
-
-    .header-text p {
-      margin: 0;
-      text-align: center;
-    }
-
-.venstre-billeder {
-  max-width: 22vw;
-  max-height: 22vw;
-    position: absolute;
-  top: 40px;
-  left: 20px;
-  height: calc(100vh - 140px); /* passer under header */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1;
-}
-
-    .venstre-billeder img {
-      flex: 1;                /* ← deler højden ligeligt */
-  width: 100%;
-  max-width: 350px;
-  object-fit: cover;      /* bevarer flot beskæring */
-  border-radius: 15px;
-    }
-
-    .punktliste {
-      list-style-type: disc;
-      margin-left: 0;
-      padding-left: 20px;
-      font-size: 20px;
-    }
-
-    .mailknap {
-      display: inline-block;
-      padding: 20px 40px; 
-      background-color: #1e90ff; 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      margin-top: 20px;
-    }
-
-    .mailknap:hover{
-      background-color: #0b7de7;
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
-      z-index: 999;
-    }
-
-    .knapcontainer {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-
-@media (max-width: 1200px) {
-  .venstre-billeder img {
-    width: 280px;
-  }
-
-  main {
-    padding-left: 320px;
-  }
-}
-
-@media (max-width: 992px) {
-  .venstre-billeder img {
-    width: 220px;
-  }
-
-  main {
-    padding-left: 260px;
-  }
-}
-
-@media (max-width: 768px) {
-  .venstre-billeder {
-    position: relative;
-    flex-direction: row;
-    margin-bottom: 20px;
-    left: 0;
-    top: 0;
-  }
-
-  .venstre-billeder img {
-    width: 120px;
-  }
-
-  main {
-    padding-left: 20px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 6px 10px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    position: static;      /* ← VIGTIGSTE LINJE */
-    margin-bottom: 12px;   /* luft mellem logo og tekst */
-    height: 70px;
-  }
-
-  .header-text h1 {
-    font-size: 1.6em;
-  }
-
-  .header-text p {
-    font-size: 1em;
-  }
-}
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="header-content">
-      <a href="index.html">
-        <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
-      </a>
-      <div class="header-text">
-        <h1>Svendborg Bildetail</h1>
-        <p>Vi giver din bil nyt liv!</p>
-      </div>
-    </div>
+<header>
+  <h1>Indvendig bil rengøring i Svendborg</h1>
+  <p>Professionel interiør rengøring – få en bil der føles som ny</p>
 
-    <nav>
-      <a href="services.html">Services</a>
-      <a href="omos.html">Om os</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="omos.html">Om os</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
 
-  <main>
-    <div class="udvendig-vask">
-      <h1>Indvendig rengøring</h1>
+<main>
 
-      <div class="venstre-billeder">
-        <img src="Billeder/flotføresæde2.png" alt="Bil interiør 1">
-        <img src="Billeder/baggeflot.jpg"Bil interiør 2>
-        <img src="Billeder/flot_bag.jpg">
-      </div>
+  <h2>Grundig indvendig bilrengøring med fokus på detaljer</h2>
 
-      <h3>Få en bil, som ser indbydende ud indvendigt og som er dejlig at være i. Vores interiør rengøring går i dybden med at fjerne støv, snavs og pletter. Med professionel indvendig bilrengøring sørger vi for, at din bil er ren, frisk og behagelig at køre i. Vi støvsuger, aftørrer overflader og rengør interiøret grundigt.</h3>
 
-      <h3>Rengøringen inkluderer:</h3>
-      <ul class="punktliste">
-        <li>Støvsugning af hele interiør</li>
-        <li>Aftørring af overflader og pletfjerning</li>
-        <li>Rens for støv</li>
-        <li>Fuld rengøring af tæpper / måtter</li>
-          <li>Rengøring af alle dørfalser</li>
-      </ul>
-      <h3>Tilkøb:</h3>
-      <ul>
-        <li>Sæderens: +149 kr</li>
-        <li>Fjern af hundehår: +99 kr</li>
-      </ul>
+  <h3>
+    Med professionel indvendig bil rengøring hos Svendborg Bildetail sørger vi for,
+    at din bil bliver ren, frisk og behagelig at opholde sig i. Vi fjerner støv,
+    snavs og pletter og giver dit interiør nyt liv – perfekt både til hverdag,
+    salg af bil eller som en årlig opfriskning.
+  </h3>
 
-      <a href="services.html" class="tilbageknap">Tilbage</a>
+  <h3>Vores indvendige rengøring starter fra 549,-</h3>
 
-      <div class="knapcontainer">
-      <a href="mailto:svendborgbildetail@gmail.com" class="mailknap">Send os en mail nu, og book en tid</a>
-      </div>
-    </div>
-  </main>
+  <div class="venstre-billeder">
+    <img src="Billeder/flotføresæde2.png" alt="Rens af forsæde i bil">
+    <img src="Billeder/baggeflot.jpg" alt="Rengøring af bagsæder">
+    <img src="Billeder/flot_bag.jpg" alt="Rent bilinteriør efter rengøring">
+  </div>
 
-  <footer>
-    <p>&copy; 2026 Svendborg Bildetail</p>
-  </footer>
+  <h2>Dette er inkluderet i indvendig rengøring</h2>
+
+  <ul>
+    <li>Støvsugning af hele bilens interiør</li>
+    <li>Aftørring af instrumentbord og overflader</li>
+    <li>Fjernelse af støv og snavs i kroge</li>
+    <li>Grundig rengøring af tæpper og måtter</li>
+    <li>Rengøring af dørfalser</li>
+  </ul>
+
+  <h2>Tilkøb til din indvendige bilrengøring</h2>
+
+  <ul>
+    <li>Sæderens <strong>+149 kr</strong></li>
+    <li>Fjernelse af hundehår <strong>+99 kr</strong></li>
+  </ul>
+
+  <h2>Hvorfor vælge os til indvendig bil rengøring?</h2>
+
+  <h3>
+    Vi hjælper bilejere i Svendborg og på Sydfyn med professionel bilpleje,
+    hvor kvalitet og grundighed er i fokus. Vores indvendige rengøring giver
+    ikke bare et pænt resultat – den forbedrer også komforten og bilens helhedsindtryk.
+  </h3>
+
+  <h2>Ofte stillede spørgsmål</h2>
+
+  <h3>Hvor lang tid tager indvendig bil rengøring?</h3>
+  <p>
+    En indvendig bilrengøring tager typisk 2–3 timer afhængigt af bilens størrelse
+    og hvor beskidt interiøret er.
+  </p>
+
+  <h3>Er indvendig rengøring nok, eller bør man vælge fuld detail?</h3>
+  <p>
+    Indvendig rengøring er perfekt, hvis fokus er kabinen. Ønsker du både
+    indvendig og udvendig pleje, anbefaler vi fuld bildetailing.
+  </p>
+
+  <div class="cta">
+    <a href="mailto:svendborgbildetail@gmail.com">Book indvendig rengøring i dag</a>
+    <a href="services.html">← Tilbage til services</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Svendborg Bildetail</p>
+</footer>
 
 </body>
 </html>

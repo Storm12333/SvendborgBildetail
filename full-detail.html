@@ -4,41 +4,31 @@
   <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Fuld bildetailing i Svendborg | Indvendig og udvendig bil rengøring" />
-<meta property="og:description" content="Indvendig bil rengøring - få en bil der føles som ny" />
-  <title>Fuld bildetailing i Svendborg | Indvendig og udvendig bil rengøring</title>
+
+  <title>Fuld bildetailing i Svendborg | Indvendig & udvendig bilrengøring</title>
+
+  <meta name="description" content="Fuld bildetailing i Svendborg – professionel indvendig og udvendig bilrengøring. Vi giver din bil nyt liv med grundig bilpleje og flotte resultater.">
+  
+  <meta property="og:title" content="Fuld bildetailing i Svendborg">
+  <meta property="og:description" content="Professionel indvendig og udvendig bilrengøring – få din bil til at føles som ny igen.">
+
   <style>
-       body {
+    body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: #679dc1;
       color: #ffffff;
-      position: relative;
-      overflow-x: hidden;
     }
 
     header {
       background: #3d527a;
-      color: white;
       padding: 30px;
       text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    nav {
-      margin-top: 10px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -47,261 +37,240 @@
       text-decoration: underline;
     }
 
-    /* --- Main tekst med plads til venstre billeder --- */
     main {
-      padding-left: clamp(280px, 38vw, 440px);
-      padding-right: 20px;
-      padding-top: 80px;
-      padding-bottom: 70px; /* plads til footer */
       max-width: 900px;
       margin: auto;
-      text-align: left;
-      position: relative;
-      z-index: 2;
+      padding: 80px 20px 120px;
     }
 
-    .tilbageknap {
-      display: inline-block; 
-      padding: 20px 40px; 
-      background-color: #1e90ff; 
-      color: white; 
-      text-decoration: none; 
+    h1 {
+      font-size: 2.6em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      font-size: 2em;
+    }
+
+    h3 {
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    .venstre-billeder {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .venstre-billeder img {
+      width: 33%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 18px 36px;
+      background: #1e90ff;
+      color: white;
+      text-decoration: none;
       border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: fit-content;
+      transition: 0.2s;
     }
 
-    .tilbageknap:hover {
-      background-color: #0b7de7;
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
-      z-index: 999;
+    .cta a:hover {
+      background: #0b7de7;
+      transform: translateY(-6px);
     }
 
     footer {
       background: #2d446c;
-      color: white;
       text-align: center;
-      padding: 12px 10px;
+      padding: 14px;
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      font-size: 0.9em;
-      z-index: 2;
     }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+    @media (max-width: 768px) {
+      .venstre-billeder {
+        flex-direction: column;
+      }
+
+      .venstre-billeder img {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
     }
-
-    .header-content a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      line-height: 0;
-    }
-
-    .logo {
-      height: 120px;
-      width: auto;
-      display: block;
-      position: absolute;
-      left: 20px;
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.5em;
-      text-align: center;
-    }
-
-    .header-text p {
-      margin: 0;
-      text-align: center;
-    }
-
-.venstre-billeder {
-  max-width: 22vw;
-  max-height: 22vw;
-    position: absolute;
-  top: 40px;
-  left: 20px;
-  height: calc(100vh - 140px); /* passer under header */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1;
-}
-
-    .venstre-billeder img {
-      flex: 1;                /* ← deler højden ligeligt */
-  width: 100%;
-  max-width: 350px;
-  object-fit: cover;      /* bevarer flot beskæring */
-  border-radius: 15px;
-    }
-
-    .punktliste {
-      list-style-type: disc;
-      margin-left: 0;
-      padding-left: 20px;
-      font-size: 20px;
-    }
-
-    .mailknap {
-      display: inline-block;
-      padding: 20px 40px; 
-      background-color: #1e90ff; 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 8px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      margin-top: 20px;
-    }
-
-    .mailknap:hover{
-      background-color: #0b7de7;
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(4, 32, 65, 0.4);
-      z-index: 999;
-    }
-
-    .knapcontainer {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-
- @media (max-width: 1200px) {
-  .venstre-billeder img {
-    width: 280px;
-  }
-
-  main {
-    padding-left: 320px;
-  }
-}
-
-@media (max-width: 992px) {
-  .venstre-billeder img {
-    width: 220px;
-  }
-
-  main {
-    padding-left: 260px;
-  }
-}
-
-@media (max-width: 768px) {
-  .venstre-billeder {
-    position: relative;
-    flex-direction: row;
-    margin-bottom: 20px;
-    left: 0;
-    top: 0;
-  }
-
-  .venstre-billeder img {
-    width: 120px;
-  }
-
-  main {
-    padding-left: 20px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 6px 10px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    position: static;      /* ← VIGTIGSTE LINJE */
-    margin-bottom: 12px;   /* luft mellem logo og tekst */
-    height: 70px;
-  }
-
-  .header-text h1 {
-    font-size: 1.6em;
-  }
-
-  .header-text p {
-    font-size: 1em;
-  }
-}
   </style>
 </head>
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
+
 <body>
 
-  <header>
-    <div class="header-content">
-      <a href="index.html">
-        <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
-      </a>
-      <div class="header-text">
-        <h1>Svendborg Bildetail</h1>
-        <p>Vi giver din bil nyt liv!</p>
-      </div>
-    </div>
+<header>
+  <h1>Komplet bilrengøring</h1>
+  <p>Indvendig og udvendig bilrengøring – professionel bilpleje</p>
 
-    <nav>
-      <a href="services.html">Services</a>
-      <a href="omos.html">Om os</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="omos.html">Om os</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
 
-  <main>
-    <div class="full-detail">
-      <h2>Fuld Detail i Svendborg</h2>
+<main>
 
-      <div class="venstre-billeder">
-        <img src="Billeder/floteqv.png" alt="Udvendig vask">
-        <img src="Billeder/seb_hjul.jpg" alt="Interiør rengøring">
-        <img src="Billeder/sebdetail.jpg">
-      </div>
+  <h2>Komplet bilrengøring – når din bil fortjener det bedste</h2>
 
-      <h3>
-        Vores fulde bildetailing er den komplette løsning til dig, der ønsker maksimal pleje af bilen. Her kombinerer vi grundig udvendig vask med dybdegående indvendig rengøring, så bilen fremstår som ny – både inde og ude.
-      </h3>
-
-      <h3>Rengøringen inkluderer:</h3>
-<ul class="punktliste">
-        <li>Vores udvendige vask pakke</li>
-        <li>Vores indvendige rengøring's pakke</li>
-      </ul>
-      <h2>Tilkøb:</h2>
-      <ul>
-        <li>Sæderens: +149 kr</li>
-        <li>Fjern af hundehår: +99 kr</li>
-        <li>Voksbehandling: +75 kr</li>
-      </ul>
+  <h3>
+    Vores fulde bildetailing i Svendborg er til dig, der vil have mere end en almindelig bilvask.
+    Vi kombinerer grundig udvendig bilrengøring med dybdegående indvendig rengøring, så bilen
+    fremstår som ny, både visuelt og i kabinen.
+  </h3>
+  <h3>Vores fuld bildetail koster 749,-</h3>
 
 
-      <a href="services.html" class="tilbageknap">Tilbage</a>
+  <div class="venstre-billeder">
+    <img src="Billeder/floteqv.png" alt="Udvendig bilvask i Svendborg">
+    <img src="Billeder/seb_hjul.jpg" alt="Indvendig bilrengøring">
+    <img src="Billeder/sebdetail.jpg" alt="Professionel bildetailing">
+  </div>
 
-      <div class="knapcontainer">
-      <a href="mailto:svendborgbildetail@gmail.com" class="mailknap">Send os en mail nu, og book en tid</a>
-      </div>
-    </div>
-  </main>
+  <h2>Hvad er inkluderet i fuld bildetailing?</h2>
 
-  <footer>
-    <p>&copy; 2026 Svendborg Bildetail</p>
-  </footer>
+  <ul>
+    <li>Grundig udvendig vask og fælgrens</li>
+    <li>Rengøring af dørfalser og detaljer</li>
+    <li>Støvsugning af hele kabinen</li>
+    <li>Aftørring og rens af overflader</li>
+    <li>Ruder rengøres indvendigt</li>
+    <li>Fuld rengøring af tæpper / måtter</li>
+  </ul>
+
+  <h2>Tilkøb til din bildetailing</h2>
+
+  <ul>
+    <li>Sæderens  <strong>+149 kr</strong></li>
+    <li>Fjernelse af hundehår <strong>+99 kr</strong></li>
+    <li>Voksbehandling  <strong>+75 kr</strong></li>
+  </ul>
+
+  <h2>Hvorfor vælge Svendborg Bildetail?</h2>
+
+  <h3>
+    Vi går op i detaljen og kvaliteten i hver eneste bil. Vores kunder vælger os,
+    fordi vi leverer synlige resultater, fair priser og personlig service.
+    Uanset om du skal sælge bilen eller bare vil forkæle den, er fuld bildetailing
+    den bedste investering.
+  </h3>
+
+  <div class="cta">
+    <a href="mailto:svendborgbildetail@gmail.com">Book tid – skriv til os i dag</a>
+    <a href="services.html">← Tilbage til services</a>
+  </div>
+
+  <h2>Ofte stillede spørgsmål om fuld bildetailing</h2>
+
+<h3><strong>Hvad er forskellen på almindelig bilvask og fuld bildetailing?</strong></h3>
+<p>
+En almindelig bilvask fjerner overfladesnavs, mens fuld bildetailing er en
+grundig og dybdegående rengøring af både bilens indvendige og udvendige dele.
+Hos Svendborg Bildetail arbejder vi med detaljer, som giver bilen et markant
+pænere udtryk og en følelse af at være som ny.
+</p>
+
+<h3><strong>Hvor lang tid tager en fuld bildetailing?</strong></h3>
+<p>
+En fuld bildetailing tager typisk mellem 1 og 3 timer, afhængigt af bilens
+størrelse og stand. Meget beskidte biler eller ekstra tilkøb som sæderens
+kan forlænge behandlingstiden.
+</p>
+
+<h3><strong>Hvem har gavn af fuld bildetailing?</strong></h3>
+<p>
+Fuld bildetailing er ideel for dig, der skal sælge bilen, lige har købt en brugt
+bil, eller blot ønsker at passe godt på din bil. Mange af vores kunder i
+Svendborg og omegn bruger behandlingen som en årlig opfriskning.
+</p>
+
+<h3><strong>Kan man tilkøbe ekstra behandlinger?</strong></h3>
+<p>
+Ja, du kan tilkøbe blandt andet sæderens, fjernelse af hundehår og voksbehandling.
+Tilkøb vælges nemt ved booking og tilpasses altid din bils behov.
+</p>
+
+<h3><strong>Hvor udfører I bildetailing?</strong></h3>
+<p>
+Vi tilbyder mobil professionel bildetailing i Svendborg og servicerer kunder fra hele
+Sydfyn. Vi tager altså ud til dig og klarer det hele! Kontakt os gerne, hvis du har spørgsmål til placering eller booking.
+</p>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Svendborg Bildetail</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvad er forskellen på almindelig bilvask og fuld bildetailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fuld bildetailing er en dybdegående rengøring af både bilens indvendige og udvendige dele, hvor der fokuseres på detaljer, som ikke dækkes af en almindelig bilvask."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor lang tid tager en fuld bildetailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En fuld bildetailing tager typisk mellem 2 og 3 timer, afhængigt af bilens størrelse og stand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvem har gavn af fuld bildetailing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fuld bildetailing er ideel for bilejere, der ønsker maksimal pleje, skal sælge bilen eller vil opfriske bilens udseende."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man tilkøbe ekstra behandlinger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, det er muligt at tilkøbe sæderens, fjernelse af hundehår og voksbehandling."
+      }
+    }
+  ]
+}
+</script>
+
 
 </body>
 </html>
