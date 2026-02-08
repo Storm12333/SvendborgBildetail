@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Professionel bilrengøring i Svendborg | Svendborg Bildetail</title>
-<meta name="description" content="Bilrengøring Svendborg | Bildetail tilbyder professionel indvendig og udvendig bilklargøring, vask, wax og pleje i Svendborg. Din bil fortjener det bedste.">
+<meta name="description" content="Bilrengøring i Svendborg ✓ Indvendig og udvendig rengøring ✓ Bildetailing ✓ Vi kører ud i Svendborg, Tåsinge og Thurø. Book i dag.">
 
 
 <script type="application/ld+json">
@@ -51,7 +51,7 @@ body {
   background: #679dc1;
   color: #fff;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 
@@ -69,14 +69,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* gør header fleksibel på små skærme */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header-content a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-bottom: 10px;
 }
 
 .logo {
@@ -100,11 +101,10 @@ header {
 
 /* NAVIGATION */
 nav {
-  margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 18px;
+  margin-top: 20px;
 }
 
 nav a {
@@ -168,18 +168,21 @@ footer {
 
 /* BAGGRUNDS SLIDER */
 .image-strip {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-40%);
-  left: 0;
-  width: 100%;
-  height: 300px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  height: 220px;
   overflow: hidden;
-  z-index: -1;
   display: flex;
   align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
   pointer-events: none;
 }
+
 
 .strip-track {
   display: flex;
@@ -201,7 +204,6 @@ footer {
 .bio {
   font-size: 13px;
   font-family: system-ui, sans-serif;
-  padding-bottom: 45px;
 }
 
 .footerlinks a {
@@ -211,6 +213,16 @@ footer {
 .servicelinks a {
   color: rgb(255, 255, 255);
   padding: 10px;
+}
+
+.servicelinks {
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+}
+
+.bio2 {
+  text-align: center;
+  padding-top: 50px;
 }
 
 @keyframes scrollLeft {
@@ -289,7 +301,48 @@ src="https://www.facebook.com/tr?id=1885228559542217&ev=PageView&noscript=1"
 
 <body>
   <!-- BAGGRUNDS SLIDER -->
-  <div class="image-strip">
+
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
+      </a>
+
+      <div class="header-text">
+        <h1>Bilrengøring i Svendborg</h1>
+        <p>Svendborg Bildetail – professionel bilpleje og detailing</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="services.html">Services</a>
+      <a href="omos.html">Om os</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+  <section id="about">
+
+    <h2>Professionel bilrengøring i Svendborg – både indvendigt og udvendigt</h2>
+
+    <p class="bio">
+      Hos Svendborg Bildetail tilbyder vi professionel bilpleje i Svendborg og omegn.
+      Vi hjælper bilejere med at få en ren, velplejet og præsentabel bil – både indvendigt og udvendigt.
+    </p>
+
+    <p class="bio">
+      Vi udfører alt fra udvendig bilvask og indvendig rengøring til fuld bildetailing,
+      hvor bilen får den komplette behandling. Derudover tilbyder vi populære tilkøb
+      som sæderens, wax-behandling og fjernelse af hundehår i bilen.
+    </p>
+
+    <p class="bio">
+      Vi går op i kvalitet, detaljer og kundetilfredshed – og vi kommer gerne ud til dig
+      i Svendborg, Tåsinge, Thurø og omegn.
+    </p>
+ <div class="image-strip">
     <div class="strip-track">
       <img src="Billeder/IMG_4912.jpg" alt="Udvendig vask i Svendborg">
       <img src="Billeder/IMG_4896.jpg" alt="Grundig bilpleje i Svendborg">
@@ -311,50 +364,37 @@ src="https://www.facebook.com/tr?id=1885228559542217&ev=PageView&noscript=1"
       <img src="Billeder/IMG_4897.jpg" alt="Indvendig bil rengøring">
     </div>
   </div>
-
-  <header>
-    <div class="header-content">
-      <a href="index.html">
-        <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
-      </a>
-
-      <div class="header-text">
-        <h2>Svendborg Bildetail</h2>
-        <p>Vi giver din bil nyt liv!</p>
-      </div>
-    </div>
-
-    <nav>
-      <a href="services.html">Services</a>
-      <a href="omos.html">Om os</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h1>Bilrengøring i Svendborg - Svendborg Bildetail klarer den!</h1>
-      <p class="bio">Hos Svendborg Bildetail tilbyder vi professionel bilpleje i Svendborg og omegn. Vi hjælper bilejere med at få en ren, velplejet og præsentabel bil – både indvendigt og udvendigt.
-
-Vi udfører alt fra udvendig bilvask og indvendig rengøring til fuld bildetailing, hvor bilen får den komplette behandling. Derudover tilbyder vi populære tilkøb som sæderens, wax-behandling og fjernelse af hundehår i bilen.
-
-Vi går op i kvalitet, detaljer og kundetilfredshed – og vi kommer gerne ud til dig i Svendborg, Tåsinge, Thurø og omegn.</p>
-      <br><br><br><br><br><br><br><br>
-<h2>Vores services</h2>
-<div class="servicelinks">
+    <div class="servicelinks">
+      <h2>Vores services</h2>
       <p>Vi tilbyder blandt andet:</p>
-      
-        <a href="/udvendig-bilvask-svendborg">Udvendig bilvask</a>
-        <a href="/indvendig-bilrengoring-svendborg">Indvendig bilrengøring</a>
-        <a href="/fuld-bildetailing-svendborg">Fuld bildetailing</a>
-</div>
-      <br>
-      <a href="services.html" class="serviceknap">Se vores services</a>
-    </section>
-  </main>
+
+      <a href="/udvendig-bilvask-svendborg">Udvendig bilvask</a>
+      <a href="/indvendig-bilrengoring-svendborg">Indvendig bilrengøring</a>
+      <a href="/fuld-bildetailing-svendborg">Fuld bildetailing</a>
+       <br>
+    </div>
+ <br>
+    <a href="services.html" class="serviceknap">Se vores services</a>
+
+    <h2>Hvorfor vælge os til bilrengøring i Svendborg?</h2>
+
+    <p>
+      Vi er et lokalt bilplejefirma i Svendborg med fokus på kvalitet, fleksibilitet
+      og grundig rengøring.
+    </p>
+
+    <p>
+      Vi servicerer både private og erhverv i Svendborg, Tåsinge og Thurø,
+      og vi tilbyder mobil bilrengøring, så du slipper for besværet.
+    </p>
+
+  </section>
+</main>
+
+
 
   <footer>
+
     <div class="footerlinks">
     <a href="udvendig-vask.html">Udvendig bilvask i Svendborg</a>
     <a href="interiør-rengøring.html">Indvendig bilrengøring i Svendborg</a>
