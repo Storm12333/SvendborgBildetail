@@ -1,179 +1,198 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Om os | Professionel bilrengøring i Svendborg | Svendborg Bildetail</title>
   <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8">
-  <title>Om os | Professionel bilrengøring i Svendborg | Svendborg Bildetail</title>
+
   <style>
-       body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #679dc1;
-      color: #ffffff;
-    }
-
-    header {
-      background: #3d527a;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      padding-bottom: 90px; /* plads til den faste footer */
-    }
-
-    /* ABOUT SECTION */
-#about h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: azure;
-}
-
-#about p {
-  max-width: 750px;
-  margin: 0 auto 20px;
-  font-size: 1.05rem;
-  color: #ffffff;
-  font-family: system-ui, sans-serif;
-  font-weight: 500;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* IMAGES */
-.images {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.images img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease;
-}
-
-.images img:hover {
-  transform: scale(1.04);
-}
-
-    footer {
-      background: #2d446c;
-      color: white;
-      text-align: center;
-      padding: 12px 10px; /* lavere højde */
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      font-size: 0.9em;
-      z-index: 1; /* ligger under hoverede kort */
-    }
-
-    /* Header layout */
-.header-content {
-  display: flex;
-  align-items: center;   /* holder logo og tekst på samme linje */
-  justify-content: center;
-  position: relative;
-}
-
-.header-content a {
-  display: flex;         /* sørger for at link og logo behandles som en blok */
-  align-items: center;   /* centrer logoet lodret */
-  text-decoration: none; /* fjerner underline */
-  line-height: 0;        /* ingen ekstra luft */
-}
-
-.logo {
-  height: 120px;
-  width: auto;
-  display: block;        /* fjerner evt. luft under billedet */
-  position: absolute;    /* placerer det til venstre */
-  left: 20px;
-}
-
-
-/* Header tekst centreret */
-.header-text {
-  text-align: center;
-}
-
-.header-text h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-.header-text p {
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,sans-serif;
+    background:linear-gradient(180deg,#0a0a0a 0%,#111 40%,#0a0a0a 100%);
+    color:#fff;
+    line-height:1.6;
   }
 
-  .logo {
-    position: static;      /* ← VIGTIGSTE LINJE */
-    margin-bottom: 12px;   /* luft mellem logo og tekst */
-    height: 70px;
+  /* HEADER */
+  header{
+    position:relative;
+    width:100%;
+    z-index:10;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #222;
+    padding:20px 50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
   }
 
-  .header-text h1 {
-    font-size: 1.6em;
+  .header-content{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
   }
 
-  .header-text p {
-    font-size: 1em;
+  .logo{
+    height:110px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
   }
-}
 
+  .header-text{
+    text-align:center;
+  }
 
+  .header-text h1{
+    margin:0;
+    font-size:2.2em;
+    color:#e6f0ff;
+  }
+
+  .header-text p{
+    margin:0;
+    font-size:1.2em;
+    color:#ccc;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    position:relative;
+  }
+
+  nav a::after{
+    content:"";
+    position:absolute;
+    bottom:-4px;
+    left:0;
+    width:0%;
+    height:2px;
+    background:#7fa8ff;
+    transition:width .3s;
+  }
+
+  nav a:hover::after{
+    width:100%;
+  }
+
+  /* MAIN */
+  main{
+    padding:60px 20px 120px;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+  }
+
+  main h1{
+    font-size:2rem;
+    color:#e6f0ff;
+    margin-bottom:30px;
+  }
+
+  #about h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#e6f0ff;
+  }
+
+  #about p{
+    font-size:1.05rem;
+    color:#ccc;
+    max-width:750px;
+    margin:0 auto 20px;
+    font-weight:500;
+  }
+
+  .images{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+  }
+
+  .images img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+  }
+
+  .images img:hover{
+    transform:scale(1.04);
+  }
+
+  .mailknap{
+    display:inline-block;
+    padding:18px 40px;
+    border:1px solid #fff;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:all .25s;
+    margin-top:30px;
+  }
+
+  .mailknap:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-4px);
+  }
+
+  footer{
+    border-top:1px solid #222;
+    text-align:center;
+    padding:40px 20px;
+    font-size:.9em;
+    color:#aaa;
+    background:#111;
+  }
+
+  @media(max-width:768px){
+    .logo{
+      position:static;
+      height:70px;
+      transform:none;
+      margin-bottom:10px;
+    }
+
+    .header-text h1{
+      font-size:1.6em;
+    }
+
+    nav{
+      display:none;
+    }
+
+    main h1{
+      font-size:1.5rem;
+    }
+  }
   </style>
 </head>
+
 <body>
 <header>
   <div class="header-content">
     <a href="index.html">
-      <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetailing Logo" class="logo">
+      <img src="Billeder/svbbd_hvidtlogo.png" alt="Svendborg Bildetail logo" class="logo">
     </a>
-
     <div class="header-text">
       <h1>Svendborg Bildetail</h1>
       <p>Vi giver din bil nyt liv!</p>
@@ -184,30 +203,30 @@
     <a href="services.html">Services</a>
     <a href="omos.html">Om os</a>
     <a href="kontakt.html">Kontakt</a>
-         <a href="privacy.html">Privacy</a>
+    <a href="privacy.html">Privacy</a>
   </nav>
 </header>
-  <main>
-    <section id="about">
-      <h2>Om os</h2>
-      <p>3 drenge med 1 mission: at få din bil til at stråle som aldrig før. Vi er tre fyre på 16-17 år, som brænder for biler og elsker at gøre dem rene. 
-      Vores mål er at give dig en god oplevelse til en god pris, perfekt til både hverdagsbiler og showcars.</p>
-      <p>Vi er tre gode venner, som går på Svendborg HHX. Vores fælles passion for biler har givet os inspiration til at starte Svendborg Bildetail, hvor vi giver biler nyt liv.
 
-    Vi går op i detaljerne, og vi elsker at se forskellen, når en bil bliver rengjort til perfektion. Som et ungt team bringer vi energi, engagement og omhu til hver bil, vi arbejder på.
+<main>
+  <h1>Om os – Svendborg Bildetail</h1>
+  <section id="about">
+    <p>3 drenge med 1 mission: at få din bil til at stråle som aldrig før. Vi er tre fyre på 16-17 år, som brænder for biler og elsker at gøre dem rene. Vores mål er at give dig en god oplevelse til en god pris, perfekt til både hverdagsbiler og showcars.</p>
+    <p>Vi er tre gode venner, som går på Svendborg HHX. Vores fælles passion for biler har givet os inspiration til at starte Svendborg Bildetail, hvor vi giver biler nyt liv. Vi går op i detaljerne, og vi elsker at se forskellen, når en bil bliver rengjort til perfektion. Som et ungt team bringer vi energi, engagement og omhu til hver bil, vi arbejder på. Hos os handler det ikke kun om at gøre bilen ren – det handler om at give bilens ejer en oplevelse af kvalitet og stolthed over sin bil.</p>
+  </section>
 
-    Hos os handler det ikke kun om at gøre bilen ren det handler om at give bilens ejer en oplevelse af kvalitet og stolthed over sin bil.</p>
-    </section>
+  <div class="images">
+    <img src="Billeder/seb_hjul.jpg" alt="">
+    <img src="Billeder/IMG_4920.jpeg" alt="">
+    <img src="Billeder/IMG_4908.jpg" alt="">
+  </div>
 
-    <div class="images">
-      <img src="Billeder/seb_hjul.jpg" height="200">
-      <img src="Billeder/IMG_4920.jpeg" height="200">
-      <img src="Billeder/IMG_4908.jpg" height="200">
-    </div>
-  </main>
+  <div class="knapcontainer">
+    <a href="mailto:svendborgbildetail@gmail.com" class="mailknap">Send os en mail og kom i kontakt</a>
+  </div>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Svendborg Bildetail - bilklargøring i Svendborg</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 Svendborg Bildetail</p>
+</footer>
 </body>
 </html>

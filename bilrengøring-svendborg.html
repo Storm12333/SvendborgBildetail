@@ -7,99 +7,182 @@
   <title>Bilrengøring i Svendborg | Professionel indvendig & udvendig rengøring</title>
   <meta name="description" content="Få professionel bilrengøring i Svendborg. Vi tilbyder grundig indvendig og udvendig rengøring – mobil bilrengøring hvor vi kommer til dig.">
 
-  <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
+  <link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #679dc1;
-      color: #ffffff;
-    }
+   body{
+margin:0;
+font-family:system-ui,-apple-system,sans-serif;
+background:linear-gradient(180deg,#0a0a0a 0%,#111 40%,#0a0a0a 100%);
+color:#fff;
+line-height:1.6;
+}
 
-    header {
-      background: #3d527a;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
+/* HEADER */
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header{
+position:relative;
+width:100%;
+z-index:10;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
+border-bottom:1px solid #222;
+padding:20px 50px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.header-content{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
 
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      padding-bottom: 90px;
-    }
+.logo{
+height:110px;
+position:absolute;
+left:20px;
+top:50%;
+transform:translateY(-50%);
+}
 
-    .box {
-      background: rgb(88, 114, 160);
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
-      margin-top: 30px;
-    }
+.header-text{
+text-align:center;
+}
 
-    .cta {
-      display: inline-block;
-      margin-top: 25px;
-      background: #111;
-      color: white;
-      padding: 14px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+.header-text h1{
+margin:0;
+font-size:2.2em;
+color:#e6f0ff;
+}
 
-    .cta:hover {
-      background: #333;
-    }
+.header-text p{
+margin:0;
+font-size:1.2em;
+color:#ccc;
+}
 
-    footer {
-      background: #2d446c;
-      color: white;
-      text-align: center;
-      padding: 12px 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 0.9em;
-    }
+nav{
+margin-top:10px;
+}
 
-    .logo {
-      height: 100px;
-      margin-bottom: 10px;
-    }
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+}
 
-    @media (max-width: 768px) {
-      .logo {
-        height: 70px;
-      }
-    }
+nav a::after{
+content:"";
+position:absolute;
+bottom:-4px;
+left:0;
+width:0%;
+height:2px;
+background:#7fa8ff;
+transition:width .3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* MAIN */
+
+main{
+padding:60px 20px 120px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+main h1{
+font-size:2rem;
+color:#e6f0ff;
+}
+
+/* KONTAKT */
+
+.Kontakter{
+font-size:1.2rem;
+margin-top:30px;
+}
+
+.mailknap{
+display:inline-block;
+padding:18px 40px;
+border:1px solid #fff;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
+transition:all .25s;
+margin-top:30px;
+}
+
+.mailknap:hover{
+background:#fff;
+color:#000;
+transform:translateY(-4px);
+}
+
+/* FOOTER */
+
+footer{
+border-top:1px solid #222;
+text-align:center;
+padding:40px 20px;
+font-size:.9em;
+color:#aaa;
+background:#111;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo{
+position:static;
+height:70px;
+transform:none;
+margin-bottom:10px;
+}
+
+.header-text h1{
+font-size:1.6em;
+}
+
+nav{
+display:none;
+}
+
+main h1{
+font-size:1.5rem;
+}
+
+}
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetail logo" class="logo">
-  </a>
+  <div class="header-content">
+    <a href="index.html">
+      <img src="Billeder/cirkellogo123.png" alt="Svendborg Bildetail logo" class="logo">
+    </a>
 
-  <h1>Bilrengøring i Svendborg</h1>
-  <p>Professionel bilrengøring i Svendborg</p>
+    <div class="header-text">
+      <h1>Bilrengøring i Svendborg</h1>
+      <p>Professionel bilrengøring i Svendborg</p>
+    </div>
+  </div>
 
   <nav>
     <a href="services.html">Services</a>
