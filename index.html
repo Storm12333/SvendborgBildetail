@@ -116,7 +116,7 @@ nav a { color: #fff; margin-left: 20px; text-decoration: none; }
   object-fit: cover;
   z-index: -2;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+   transition: opacity 2s ease-in-out;
 }
 .hero-video.top-video { opacity: 1; z-index: -1; }
 
@@ -391,7 +391,7 @@ Stærkt arbejde 👌"
 </footer>
 
 <!-- VIDEO SCRIPT -->
-<script>
+ <script>
 const videos = [
   "video/prewash.mp4",
   "video/hej.mp4",
@@ -414,35 +414,53 @@ let video1 = document.getElementById("heroVideo1");
 let video2 = document.getElementById("heroVideo2");
 
 function getNextVideo() {
-  if (queue.length === 0) {
-    shuffleVideos(); // alle videoer er spillet → bland igen
-  }
+  if (queue.length === 0) shuffleVideos();
   return queue.pop();
 }
 
+// Start første video
 video1.src = getNextVideo();
 video1.style.opacity = 1;
 video1.play();
 
-function playNextVideo() {
+function scheduleNextVideo(current, next) {
+  // Start fade 2 sek før videoen slutter
+  const fadeTime = 2; // sekunder
+  const duration = current.duration;
 
-  const nextVideo = getNextVideo();
+  if (isNaN(duration)) {
+    // Hvis duration ikke er loadet endnu, vent 0.5s og prøv igen
+    setTimeout(() => scheduleNextVideo(current, next), 500);
+    return;
+  }
 
-  video2.src = nextVideo;
-  video2.load();
-  video2.play();
+  const timeToFade = (duration - fadeTime) * 1000;
+  setTimeout(() => {
+    // Start næste video bagved
+    next.src = getNextVideo();
+    next.load();
+    next.play();
+    next.style.opacity = 0;
 
-  video2.style.opacity = 1;
-  video1.style.opacity = 0;
+    // Fade
+    next.style.transition = 'opacity 2s ease-in-out';
+    current.style.transition = 'opacity 2s ease-in-out';
 
-  [video1, video2] = [video2, video1];
+    setTimeout(() => {
+      next.style.opacity = 1;
+      current.style.opacity = 0;
 
-  video1.onended = playNextVideo;
+      // swap references
+      [video1, video2] = [video2, video1];
+
+      // Sæt schedule for næste skift
+      scheduleNextVideo(video1, video2);
+    }, 50); // kort delay så transition registreres
+  }, timeToFade);
 }
 
-video1.onended = playNextVideo;
-
+// Start loop
+scheduleNextVideo(video1, video2);
 </script>
-
 </body>
 </html>
