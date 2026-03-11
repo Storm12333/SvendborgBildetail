@@ -402,12 +402,10 @@ const videos = [
   "video/spuling.mov"
 ];
 
-let shuffled = [];
-let current = 0;
+let queue = [];
 
 function shuffleVideos() {
-  shuffled = [...videos].sort(() => Math.random() - 0.5);
-  current = 0;
+  queue = [...videos].sort(() => Math.random() - 0.5);
 }
 
 shuffleVideos();
@@ -415,19 +413,22 @@ shuffleVideos();
 let video1 = document.getElementById("heroVideo1");
 let video2 = document.getElementById("heroVideo2");
 
-video1.src = shuffled[current];
+function getNextVideo() {
+  if (queue.length === 0) {
+    shuffleVideos(); // alle videoer er spillet → bland igen
+  }
+  return queue.pop();
+}
+
+video1.src = getNextVideo();
 video1.style.opacity = 1;
 video1.play();
 
 function playNextVideo() {
 
-  current++;
+  const nextVideo = getNextVideo();
 
-  if (current >= shuffled.length) {
-    shuffleVideos(); // starter ny tilfældig rækkefølge
-  }
-
-  video2.src = shuffled[current];
+  video2.src = nextVideo;
   video2.load();
   video2.play();
 
