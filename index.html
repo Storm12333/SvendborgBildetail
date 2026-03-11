@@ -195,6 +195,65 @@ footer {
 }
 .footerlinks a { color: rgb(149, 149, 149); }
 
+
+.kunde-anmeldelser {
+  text-align: center;
+  background-color: #ffffff;
+  color: black;
+}
+
+
+/*reviews*/
+/* REVIEWS */
+
+.reviews{
+margin-top:70px;
+text-align:center;
+}
+
+.reviews h2{
+font-size:2rem;
+margin-bottom:30px;
+color:#ffffff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.review{
+background:#c1c1c1;
+padding:25px;
+border-radius:14px;
+border:1px solid #222;
+transition:all .25s;
+}
+
+.review:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.review p{
+color:#000000;
+font-size:1rem;
+}
+
+.review span{
+display:block;
+margin-top:10px;
+font-size:1.2rem;
+color:#ffd700;
+}
+
+.review h4{
+margin-top:10px;
+font-weight:500;
+color:#000000;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .hero-content h2 { font-size: 2rem; }
@@ -251,8 +310,8 @@ footer {
 </header>
 
 <section class="hero">
-  <video autoplay muted loop playsinline class="hero-video top-video" id="heroVideo1"></video>
-  <video autoplay muted loop playsinline class="hero-video bottom-video" id="heroVideo2"></video>
+  <video autoplay muted playsinline class="hero-video top-video" id="heroVideo1"></video>
+  <video autoplay muted playsinline class="hero-video bottom-video" id="heroVideo2"></video>
 
   <div class="hero-content">
     <h2>Professionel bilpleje i Svendborg</h2>
@@ -285,6 +344,42 @@ footer {
   </div>
 </section>
 
+<section class="reviews">
+
+<h2>Hvad siger vores kunder?</h2>
+
+<div class="review-grid">
+
+<div class="review">
+<p>
+"Super professionel og pålidelig bilrengøring. Bilen kom tilbage skinnende ren både indvendigt og udvendigt, og servicen var hurtig. Kan klart anbefales."
+</p>
+<span>★★★★★</span>
+<h4>– Jacob, Svendborg</h4>
+</div>
+
+<div class="review">
+<p>
+"Jeg kan på det varmeste anbefale de gutter her,- de er venlige, effektive, arbejdsomme og yder en ekstrem professionel service. 
+Tøv ikke med at tage fat i dem 🤝 det kommer vi ihvertfald til igen, når bilen trænger til en tur mere.
+Stærkt arbejde 👌"
+</p>
+<span>★★★★★</span>
+<h4>– Kenneth, Tved</h4>
+</div>
+
+<div class="review">
+<p>
+"Helt utroligt flot resultat. Vi kan derfor sende vores bedste anbefalinger og det er absolut ikke sidste gang at de bliver booket. "
+</p>
+<span>★★★★★</span>
+<h4>– Ulrik, Svendborg</h4>
+</div>
+
+</div>
+
+</section>
+
 <footer>
   <div class="footerlinks">
     <a href="udvendig-vask.html">Udvendig bilvask i Svendborg</a>
@@ -301,24 +396,51 @@ const videos = [
   "video/prewash.mov",
   "video/hej.mov",
   "video/hej1.mov",
+  "video/contactwash.mov",
+  "video/flotprewash.mov",
+  "video/prewash2.mov",
+  "video/spuling.mov"
 ];
 
-let index = 0;
+let shuffled = [];
+let current = 0;
+
+function shuffleVideos() {
+  shuffled = [...videos].sort(() => Math.random() - 0.5);
+  current = 0;
+}
+
+shuffleVideos();
+
 let video1 = document.getElementById("heroVideo1");
 let video2 = document.getElementById("heroVideo2");
 
-video1.src = videos[0];
+video1.src = shuffled[current];
 video1.style.opacity = 1;
+video1.play();
 
-setInterval(() => {
-  const nextIndex = (index + 1) % videos.length;
-  video2.src = videos[nextIndex];
+function playNextVideo() {
+
+  current++;
+
+  if (current >= shuffled.length) {
+    shuffleVideos(); // starter ny tilfældig rækkefølge
+  }
+
+  video2.src = shuffled[current];
+  video2.load();
   video2.play();
+
   video2.style.opacity = 1;
   video1.style.opacity = 0;
+
   [video1, video2] = [video2, video1];
-  index = nextIndex;
-}, 8000);
+
+  video1.onended = playNextVideo;
+}
+
+video1.onended = playNextVideo;
+
 </script>
 
 </body>
