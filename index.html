@@ -9,9 +9,10 @@
 <meta property="og:type" content="website">
 <meta name="google-site-verification" content="-MD5xH4630308zWLz2Lzm965OEUV6vEKlvFZn_SOq5g">
 
-<link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
+<link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
+<link rel="canonical" href="https://svendborgbildetail.dk/">
 
-<title>Professionel bilrengøring i Svendborg | Svendborg Bildetail</title>
+<title>Bilrengøring i Svendborg | Indvendig & Udvendig Bilvask | Svendborg Bildetail</title>
 <meta name="description" content="Bilrengøring i Svendborg ✓ Indvendig og udvendig rengøring ✓ Bildetailing ✓ Vi kører ud i Svendborg, Tåsinge og Thurø. Book i dag.">
 
 <!-- JSON-LD FOR LOCALBUSINESS -->
@@ -469,6 +470,120 @@ font-size:0.95rem;
 color:#ddd;
 }
 
+.ba-container-border {
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 10px;
+  }
+
+/* CONTAINER FOR SEO OG FAQ SOM KOLONNER */
+.seo-faq-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1800px; /* øget bredde */
+  margin: 60px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.seo-text, .faq {
+  flex: 1 1 48%; /* øger bredden fra 45% til 48% */
+  padding: 25px; /* lidt ekstra padding for luft */
+  min-width: 400px; /* sikrer minimumsstørrelse på små skærme */
+}
+
+/* SEO TEKST */
+.seo-text {
+  flex: 1 1 45%; /* tager cirka halvdelen af bredden */
+  padding: 20px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.seo-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.seo-text h3 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.seo-text p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+/* FAQ */
+.faq {
+  flex: 1 1 45%;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  color: #f5f5f5;
+}
+
+.faq h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.faq h3 {
+  font-size: 1.2rem;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.faq p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #ddd;
+  padding-left: 8px;
+  border-left: 3px solid #ffd700;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+  .seo-faq-container {
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 15px;
+  }
+
+  .seo-text, .faq {
+    flex: 1 1 100%;
+    padding: 15px;
+  }
+
+  .seo-text h2, .faq h2 {
+    font-size: 1.6rem;
+  }
+
+  .seo-text h3, .faq h3 {
+    font-size: 1.2rem;
+  }
+
+  .seo-text p, .faq p {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 /* MOBILE */
 
@@ -546,53 +661,6 @@ margin-right:auto;
     font-size: 1.8rem;
   }
 
-  @media(max-width:768px){
-
-nav{
-  display:flex;
-  gap:12px;
-  font-size:0.9rem;
-}
-
-header{
-  flex-direction:column;
-  gap:10px;
-}
-
-}
-
-
-}
-
-@media(max-width:768px){
-
-header{
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  padding:15px 20px;
-}
-
-.logo{
-  height:60px;
-  margin-bottom:8px;
-}
-
-header h1{
-  position:static;
-  transform:none;
-  width:auto;
-  font-size:1.2rem;
-}
-
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:8px;
-}
-
 }
 </style>
 </head>
@@ -600,7 +668,7 @@ nav{
 
 <header>
   <img src="Billeder/svbbd_hvidtlogo.png" class="logo">
-  <h1>Bilrengøring i Svendborg - Svendborg Bildetail</h1>
+  <p>Bilrengøring i Svendborg - Svendborg Bildetail</p>
   <nav>
     <a href="services.html">Services</a>
     <a href="omos.html">Om os</a>
@@ -610,11 +678,12 @@ nav{
 </header>
 
 <section class="hero">
-  <video autoplay="" muted="" playsinline="" class="hero-video top-video" id="heroVideo1" src="video/spuling.mp4" style="opacity: 1;"></video>
-  <video autoplay="" muted="" playsinline="" class="hero-video bottom-video" id="heroVideo2"></video>
+  <video  preload="none" muted="" playsinline="" class="hero-video top-video" id="heroVideo1" src="video/spuling.mp4" style="opacity: 1;"></video>
+  <video preload="none" muted="" playsinline="" class="hero-video bottom-video" id="heroVideo2"></video>
 
   <div class="hero-content">
-    <h2>Professionel bilpleje i Svendborg</h2>
+    <h1>Professionel bilrengøring i Svendborg</h1>
+    <h2>Svendborg Bildetail – Mobil bilpleje</h2>
     <p>Indvendig rengøring · Udvendig vask · Fuld bildetailing</p>
     <a href="services.html" class="cta">Se vores services</a>
   </div>
@@ -685,6 +754,7 @@ Stærkt arbejde 👌"
   <p class="ba-subtitle">Her kan du se effekten af vores professionelle bilrengøring.</p>
 
   <div class="ba-container">
+    <div class="ba-container-border">
     <div class="ba-images">
       <div class="ba-image-wrapper-simple">
         <img src="Billeder/før1.png" alt="Før bilrengøring">
@@ -695,6 +765,8 @@ Stærkt arbejde 👌"
         <p>EFTER</p>
       </div>
     </div>
+    </div>
+    <div class="ba-container-border">
     <div class="ba-images">
       <div class="ba-image-wrapper-simple">
         <img src="Billeder/før3.png" alt="Før bilrengøring">
@@ -705,6 +777,7 @@ Stærkt arbejde 👌"
         <p>EFTER</p>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -719,6 +792,33 @@ Stærkt arbejde 👌"
 <img src="Billeder/flot_bag.jpg" alt="Bil efter detail">
 </div>
 </div>
+</section>
+
+<section class="seo-faq-container">
+  <div class="seo-text">
+  <h2>Bilrengøring i Svendborg, Tåsinge og Thurø</h2>
+  <p>Hos <strong>Svendborg Bildetail</strong> tilbyder vi professionel bilrengøring i Svendborg og omegn. Vi specialiserer os i <strong><a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a></strong>, <strong><a href="udvendig-vask.html" style="color: white;">udvendig bilvask</a></strong> og <strong><a href="full-detail.html" style="color: white;">fuld bildetailing</a></strong>, så din bil fremstår skinnende ren og velplejet. Vores mobile service gør det nemt – vi kommer til dig, uanset om du bor i Svendborg, på Tåsinge eller Thurø.</p>
+
+  <h3>Professionel indvendig bilrengøring</h3>
+  <p>Vi tilbyder grundig <a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a>, der inkluderer støvsugning af sæder og gulve, rengøring af instrumentbord og paneler samt pleje af tekstil og læderoverflader. Din bil vil efter vores behandling føles frisk, ren og velholdt.</p>
+
+  <h3>Udvendig bilvask og detailing</h3>
+  <p>Vores udvendige bilvask fjerner effektivt snavs, salt og skidt fra lakken, hjul og karrosseri. </p>
+
+  <h3>Mobil bilpleje – vi kommer til dig</h3>
+  <p>Med vores mobile bilrengøring sparer du tid og besvær. Vi medbringer alt udstyr og professionelle rengøringsmidler, og alt du skal sørge for, er adgang til vand og el.</p>
+
+  
+</div>
+  <div class="faq">
+    <h2>Ofte stillede spørgsmål</h2>
+    <h3>Hvor lang tid tager en bilrengøring?</h3>
+    <p>En typisk bilrengøring tager mellem 2 og 3 timer, afhængig af bilens beskidthed, størrelse og tilkøb.</p>
+    <h3>Kører I ud til kunden?</h3>
+    <p>Ja, vi tilbyder mobil bilrengøring i Svendborg, Tåsinge, Thurø og omegn.</p>
+    <h3>Hvad koster bilrengøring?</h3>
+    <p>Prisen afhænger af hvilken service du vælger.</p>
+  </div>
 </section>
 
 
@@ -747,27 +847,27 @@ Stærkt arbejde 👌"
       <div class="hours">
         <div class="hour-row">
           <span>Mandag</span>
-          <span>014:00 – 18:00</span>
+          <span>14:00 – 18:00</span>
         </div>
 
         <div class="hour-row">
           <span>Tirsdag</span>
-          <span>014:00 – 18:00</span>
+          <span>14:00 – 18:00</span>
         </div>
 
         <div class="hour-row">
           <span>Onsdag</span>
-          <span>014:00 – 18:00</span>
+          <span>14:00 – 18:00</span>
         </div>
 
         <div class="hour-row">
           <span>Torsdag</span>
-          <span>014:00 – 18:00</span>
+          <span>14:00 – 18:00</span>
         </div>
 
         <div class="hour-row">
           <span>Fredag</span>
-          <span>014:00 – 17:00</span>
+          <span>14:00 – 17:00</span>
         </div>
 
         <div class="hour-row">

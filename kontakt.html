@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <link rel="icon" href="Billeder/cirkellogo123.png" type="image/x-icon">
+  <link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
   <title>Kontakt os for professionel bil rengøring | Svendborg Bildetail</title>
@@ -24,6 +24,7 @@ background:rgba(0,0,0,0.75);
 backdrop-filter:blur(8px);
 border-bottom:1px solid #222;
 padding:20px 50px;
+box-sizing:border-box;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -38,7 +39,9 @@ position:relative;
 }
 
 .logo{
-height:110px;
+height:120px;
+width:auto;
+display:block;
 position:absolute;
 left:20px;
 top:50%;
@@ -51,7 +54,7 @@ text-align:center;
 
 .header-text h1{
 margin:0;
-font-size:2.2em;
+font-size:2.5em;
 color:#e6f0ff;
 }
 
@@ -87,6 +90,7 @@ transition:width .3s;
 nav a:hover::after{
 width:100%;
 }
+
 
 /* MAIN */
 
@@ -136,6 +140,122 @@ padding:40px 20px;
 font-size:.9em;
 color:#aaa;
 background:#111;
+}
+
+.contact-section{
+padding:90px 20px;
+background:#0d0d0d;
+border-top:1px solid #222;
+}
+
+.contact-container{
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:start;
+}
+
+.contact-left h2{
+font-size:2.3rem;
+margin-bottom:15px;
+}
+
+.contact-left p{
+color:#bbb;
+margin-bottom:25px;
+max-width:420px;
+}
+
+.contact-info p{
+margin:8px 0;
+font-size:1rem;
+}
+
+.contact-info a{
+color:#fff;
+text-decoration:none;
+border-bottom:1px solid #444;
+}
+
+.contact-info a:hover{
+border-color:#fff;
+}
+
+.contact-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+border:1px solid #fff;
+text-decoration:none;
+color:#fff;
+font-weight:600;
+transition:0.25s;
+}
+
+.contact-btn:hover{
+background:#fff;
+color:#000;
+}
+
+
+/* HOURS */
+
+.contact-right{
+background:#111;
+border:1px solid #222;
+border-radius:14px;
+padding:35px;
+}
+
+.contact-right h3{
+margin-top:0;
+margin-bottom:20px;
+font-size:1.6rem;
+}
+
+.hours{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.hour-row{
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #222;
+padding-bottom:8px;
+font-size:0.95rem;
+color:#ddd;
+}
+
+.ba-container-border {
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 10px;
+  }
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.contact-container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.contact-left{
+text-align:center;
+}
+
+.contact-left p{
+margin-left:auto;
+margin-right:auto;
+}
+
 }
 
 /* MOBILE */
@@ -199,6 +319,68 @@ font-size:1.5rem;
       <a href="mailto:svendborgbildetail@gmail.com" class="mailknap">Send os en mail nu, og book en tid</a>
       </div>
   </main>
+
+  <section class="contact-section">
+  <div class="contact-container">
+
+    <div class="contact-left">
+      <h2>Kontakt os</h2>
+      <p>Har du spørgsmål eller vil du booke en tid til bilrengøring?  
+      Kontakt os – vi svarer hurtigt.</p>
+
+      <div class="contact-info">
+        <p><strong>Telefon:</strong> <a href="tel:+4529729695">29 72 96 95</a></p>
+        <p><strong>Email:</strong> <a href="mailto:svendborgbildetail@gmail.com">svendborgbildetail@gmail.com</a></p>
+        <p><strong>Område:</strong> Svendborg & Omegn</p>
+      </div>
+
+      <a href="kontakt.html" class="contact-btn">Kontakt os</a>
+    </div>
+
+
+    <div class="contact-right">
+      <h3>Telefontider</h3>
+
+      <div class="hours">
+        <div class="hour-row">
+          <span>Mandag</span>
+          <span>14:00 – 18:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Tirsdag</span>
+          <span>14:00 – 18:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Onsdag</span>
+          <span>14:00 – 18:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Torsdag</span>
+          <span>14:00 – 18:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Fredag</span>
+          <span>14:00 – 17:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Lørdag</span>
+          <span>12:00 – 15:00</span>
+        </div>
+
+        <div class="hour-row">
+          <span>Søndag</span>
+          <span>Lukket</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2026 Svendborg Bildetail</p>
