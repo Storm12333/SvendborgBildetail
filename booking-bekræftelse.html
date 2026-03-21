@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tak for din booking | Svendborg Bildetail</title>
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --gold: #c8a96e;
+    --dim: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.1);
+    --text-muted: rgba(255,255,255,0.5);
+  }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    height: 60px;
+    opacity: 0.9;
+  }
+
+  nav a {
+    color: var(--white);
+    margin-left: 24px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  nav a:hover { opacity: 1; }
+
+  /* MAIN CONTENT */
+  main {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background grain texture */
+  main::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Glow blob */
+  main::after {
+    content: "";
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .content-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 30px 80px;
+    text-align: center;
+  }
+
+  /* Check icon */
+  .check-circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(200,169,110,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px;
+    animation: pulse-ring 2s ease-out infinite;
+    position: relative;
+  }
+
+  .check-circle::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,169,110,0.15);
+    animation: pulse-ring 2s ease-out 0.3s infinite;
+  }
+
+  .check-circle svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--gold);
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: draw-check 0.6s ease-out 0.4s forwards;
+  }
+
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(200,169,110,0.2); }
+    70% { box-shadow: 0 0 0 12px rgba(200,169,110,0); }
+    100% { box-shadow: 0 0 0 0 rgba(200,169,110,0); }
+  }
+
+  @keyframes draw-check {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* Heading */
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 8px;
+    animation: fade-up 0.7s ease-out 0.2s both;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 40px;
+    animation: fade-up 0.7s ease-out 0.35s both;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Divider */
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(200,169,110,0.4);
+    margin: 0 auto 40px;
+    animation: fade-up 0.7s ease-out 0.45s both;
+  }
+
+  /* Info body */
+  .body-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.72);
+    max-width: 480px;
+    margin: 0 auto 50px;
+    animation: fade-up 0.7s ease-out 0.5s both;
+  }
+
+  /* Info card */
+  .info-card {
+    background: var(--dim);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px 35px;
+    margin-bottom: 40px;
+    text-align: left;
+    animation: fade-up 0.7s ease-out 0.6s both;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .info-label {
+    color: var(--text-muted);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .info-value {
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  .info-value.gold { color: var(--gold); }
+
+  /* Buttons */
+  .btn-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fade-up 0.7s ease-out 0.75s both;
+  }
+
+  .btn {
+    padding: 14px 36px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.25s;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--white);
+    color: var(--black);
+  }
+  .btn-primary:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+  }
+  .btn-outline:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.06);
+  }
+
+  /* Fine print */
+  .fine-print {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    animation: fade-up 0.7s ease-out 0.85s both;
+  }
+
+  .fine-print a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s;
+  }
+  .fine-print a:hover { border-color: rgba(255,255,255,0.5); }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    header { padding: 14px 20px; }
+    .logo { height: 44px; }
+    nav { display: none; }
+    .info-card { padding: 22px 20px; }
+    .btn-row { flex-direction: column; align-items: stretch; }
+    .btn { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="Billeder/svbbd_hvidtlogo.png" class="logo" alt="Svendborg Bildetail Logo">
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="omos.html">Om os</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content-wrap">
+
+    <div class="check-circle">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="4 13 9 18 20 7"/>
+      </svg>
+    </div>
+
+    <p class="subheadline">Booking bekræftet</p>
+    <h1 class="headline">Vi ses snart</h1>
+    <div class="divider"></div>
+
+    <p class="body-text">
+      Tak for din booking hos Svendborg Bildetail. Vi har modtaget din forespørgsel og vender tilbage med en endelig bekræftelse hurtigst muligt.
+    </p>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Status</span>
+        <span class="info-value gold">Afventer bekræftelse</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Telefon</span>
+        <span class="info-value"><a href="tel:+4529729695" style="color:inherit;text-decoration:none;">29 72 96 95</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Email</span>
+        <span class="info-value"><a href="mailto:svendborgbildetail@gmail.com" style="color:inherit;text-decoration:none;">svendborgbildetail@gmail.com</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Område</span>
+        <span class="info-value">Svendborg, Tåsinge & Thurø</span>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a href="index.html" class="btn btn-primary">Tilbage til forsiden</a>
+      <a href="services.html" class="btn btn-outline">Se vores services</a>
+    </div>
+
+    <p class="fine-print">
+      Har du spørgsmål? Ring til os i <a href="kontakt.html">telefontiden</a> eller skriv en mail.<br>
+      Vi svarer typisk inden for 24 timer på hverdage.
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Svendborg Bildetail – Bilklargøring i Svendborg</p>
+</footer>
+
+</body>
+</html>
