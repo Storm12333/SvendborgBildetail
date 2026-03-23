@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
+<title>Priser & Services | Svendborg Bildetail</title>
+<link rel="canonical" href="https://svendborgbildetail.dk/services.html">
+<meta name="description" content="Se alle vores services og priser – udvendig bilvask, indvendig bilrengøring og fuld bildetailing i basis og premium. Priser efter bilstørrelse. Mobil bilpleje i Svendborg.">
+
+<style>
+/* GLOBAL */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, #0a0a0a 0%, #111 40%, #0a0a0a 100%);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #222;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.logo {
+  height: 120px;
+  width: auto;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-text { text-align: center; }
+.header-text h1 { margin: 0; font-size: 2.5em; color: #e6f0ff; }
+.header-text p { margin: 0; font-size: 1.2em; color: #ccc; }
+nav { margin-top: 10px; }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0%; height: 2px;
+  background: #7fa8ff;
+  transition: width 0.3s;
+}
+nav a:hover::after { width: 100%; }
+
+/* HERO */
+.hero {
+  background: #111;
+  padding: 50px 20px 40px;
+  text-align: center;
+}
+.hero h2 { font-size: 2.2rem; color: #e6f0ff; margin: 0 0 10px; }
+.hero p { font-size: 1.1rem; color: #bbb; margin: 0; }
+
+/* SIZE KEY */
+.size-key {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  display: flex;
+  gap: 0;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.size-key-item {
+  flex: 1;
+  padding: 14px 16px;
+  text-align: center;
+  border-right: 1px solid #2a2a2a;
+}
+.size-key-item:last-child { border-right: none; }
+.size-key-item .size-letter {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7fa8ff;
+  display: block;
+}
+.size-key-item .size-desc {
+  font-size: 0.78rem;
+  color: #888;
+  display: block;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+/* MAIN */
+main {
+  padding: 50px 20px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* SERVICE BLOCK */
+.service-block {
+  margin-bottom: 60px;
+}
+.service-block-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.service-block-header .icon {
+  font-size: 1.8rem;
+}
+.service-block-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #e6f0ff;
+}
+.service-block-header .divider-line {
+  flex: 1;
+  height: 1px;
+  background: #222;
+}
+
+/* PAKKE GRID */
+.pakke-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* PAKKE CARD */
+.pakke-card {
+  background: rgba(30,30,30,0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.pakke-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+.pakke-card.basis:hover { border-color: rgba(255,255,255,0.2); }
+.pakke-card.premium { border-color: rgba(127,168,255,0.3); }
+.pakke-card.premium:hover { border-color: #7fa8ff; box-shadow: 0 20px 40px rgba(127,168,255,0.15); }
+
+/* Premium glow */
+.pakke-card.premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(127,168,255,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.pakke-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.basis .pakke-label { background: #1e1e1e; color: #888; border: 1px solid #333; }
+.premium .pakke-label { background: rgba(127,168,255,0.15); color: #7fa8ff; border: 1px solid rgba(127,168,255,0.3); }
+
+.pakke-card h3 {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  color: #e6f0ff;
+}
+
+/* PRICES TABLE */
+.prices {
+  border-top: 1px solid #222;
+  padding-top: 14px;
+  margin-bottom: 18px;
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 0.95rem;
+}
+.price-row:last-child { border-bottom: none; }
+.price-size { color: #999; }
+.price-size .size-tag {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: #1e1e1e;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #666;
+  margin-right: 8px;
+}
+.price-amount { font-size: 1.05rem; font-weight: 700; color: #fff; }
+.premium .price-amount { color: #a8c4ff; }
+
+/* INCLUDES */
+.includes-section { margin-top: 16px; }
+.includes-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.include-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #aaa;
+  padding: 3px 0;
+}
+.check { color: #4a9e6e; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+.check-blue { color: #7fa8ff; font-size: 0.8rem; flex-shrink: 0; margin-top: 2px; }
+
+.saving-note {
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: rgba(127,168,255,0.07);
+  border-radius: 8px;
+  border-left: 2px solid rgba(127,168,255,0.4);
+  font-size: 0.8rem;
+  color: #7fa8ff;
+}
+
+/* TILKØB */
+.tilkoeb-section {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+.tilkoeb-box {
+  background: rgba(30,30,30,0.5);
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 30px 32px;
+}
+.tilkoeb-box h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: #e6f0ff;
+}
+.tilkoeb-box .sub {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0 0 22px;
+}
+.tilkoeb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 10px;
+}
+.tilkoeb-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.tilkoeb-name { color: #bbb; }
+.tilkoeb-price { font-weight: 700; color: #fff; }
+
+/* CONTACT */
+.contact-section {
+  padding: 90px 20px;
+  background: #0d0d0d;
+  border-top: 1px solid #222;
+}
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-left h2 { font-size: 2.3rem; margin-bottom: 15px; }
+.contact-left p { color: #bbb; margin-bottom: 25px; max-width: 420px; }
+.contact-info p { margin: 8px 0; font-size: 1rem; }
+.contact-info a { color: #fff; text-decoration: none; border-bottom: 1px solid #444; }
+.contact-info a:hover { border-color: #fff; }
+.contact-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 35px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.contact-btn:hover { background: #fff; color: #000; }
+.contact-right {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 35px;
+}
+.contact-right h3 { margin-top: 0; margin-bottom: 20px; font-size: 1.6rem; }
+.hours { display: flex; flex-direction: column; gap: 12px; }
+.hour-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  padding-bottom: 8px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9em;
+  color: #aaa;
+  background: #111;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .logo { position: static; margin-bottom: 12px; transform: none; height: 70px; }
+  .header-text h1 { font-size: 1.6em; }
+  .header-text p { font-size: 1em; }
+  nav { display: none; }
+  .pakke-grid { grid-template-columns: 1fr; }
+  .hero h2 { font-size: 1.6rem; }
+  .size-key { flex-direction: column; border-radius: 12px; }
+  .size-key-item { border-right: none; border-bottom: 1px solid #2a2a2a; }
+  .size-key-item:last-child { border-bottom: none; }
+  .contact-container { grid-template-columns: 1fr; gap: 40px; }
+  .contact-left { text-align: center; }
+  .contact-left p { margin-left: auto; margin-right: auto; }
+  header { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <a href="index.html">
+      <img src="Billeder/svbbd_hvidtlogo.png" alt="Svendborg Bildetailing Logo" class="logo">
+    </a>
+    <div class="header-text">
+      <h1>Professionel bilrengøring i Svendborg</h1>
+      <p>Vi giver din bil nyt liv!</p>
+    </div>
+  </div>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="omos.html">Om os</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Vores services & priser</h2>
+  <p>Vælg mellem basis og premium – tilpasset din bilstørrelse.</p>
+</div>
+
+<main>
+
+  <!-- STØRRELSE GUIDE -->
+  <div class="size-key">
+    <div class="size-key-item">
+      <span class="size-letter">L</span>
+      <span class="size-desc">Lille citybil<br>Polo, Yaris, Micra</span>
+    </div>
+    <div class="size-key-item">
+      <span class="size-letter">M</span>
+      <span class="size-desc">Mellemstor bil<br>Golf, Focus, A4</span>
+    </div>
+    <div class="size-key-item">
+      <span class="size-letter">S</span>
+      <span class="size-desc">Stor bil / SUV<br>Tiguan, Transit, X5</span>
+    </div>
+  </div>
+
+  <!-- UDVENDIG VASK -->
+  <div class="service-block">
+    <div class="service-block-header">
+      <span class="icon">🚗</span>
+      <h2>Udvendig vask</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="pakke-grid">
+
+      <div class="pakke-card basis">
+        <span class="pakke-label">Basis</span>
+        <h3>Udvendig vask basis</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">349 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">399 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">449 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Inkluderer</p>
+          <div class="include-item"><span class="check">✓</span>Grundig udvendig vask & fælgrens</div>
+          <div class="include-item"><span class="check">✓</span>Dørfalser & detaljer</div>
+          <div class="include-item"><span class="check">✓</span>Ruder udvendig</div>
+        </div>
+      </div>
+
+      <div class="pakke-card premium">
+        <span class="pakke-label">Premium</span>
+        <h3>Udvendig vask premium</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">499 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">549 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">649 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Alt fra basis, plus</p>
+          <div class="include-item"><span class="check-blue">✓</span>Plastikpleje inkluderet</div>
+        </div>
+        <div class="saving-note">Voksbehandling kan tilkøbes – se nedenfor</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INDVENDIG RENGØRING -->
+  <div class="service-block">
+    <div class="service-block-header">
+      <span class="icon">🧼</span>
+      <h2>Indvendig rengøring</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="pakke-grid">
+
+      <div class="pakke-card basis">
+        <span class="pakke-label">Basis</span>
+        <h3>Indvendig rengøring basis</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">599 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">699 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">799 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Inkluderer</p>
+          <div class="include-item"><span class="check">✓</span>Støvsugning af hele kabinen</div>
+          <div class="include-item"><span class="check">✓</span>Rensning af overflader & instrumentbord</div>
+          <div class="include-item"><span class="check">✓</span>Ruder indvendig</div>
+          <div class="include-item"><span class="check">✓</span>Måtter & bagagerum</div>
+        </div>
+      </div>
+
+      <div class="pakke-card premium">
+        <span class="pakke-label">Premium</span>
+        <h3>Indvendig rengøring premium</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">799 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">899 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">1.049 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Alt fra basis, plus</p>
+          <div class="include-item"><span class="check-blue">✓</span>Sæderens inkluderet</div>
+          <div class="include-item"><span class="check-blue">✓</span>Læderbehandling inkluderet</div>
+        </div>
+        <div class="saving-note">Sæderens koster 199 kr som tilkøb – her er det med</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FULL DETAIL -->
+  <div class="service-block">
+    <div class="service-block-header">
+      <span class="icon">✨</span>
+      <h2>Full detail</h2>
+      <div class="divider-line"></div>
+    </div>
+    <div class="pakke-grid">
+
+      <div class="pakke-card basis">
+        <span class="pakke-label">Basis</span>
+        <h3>Full detail basis</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">849 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">999 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">1.149 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Inkluderer</p>
+          <div class="include-item"><span class="check">✓</span>Alt fra udvendig vask basis</div>
+          <div class="include-item"><span class="check">✓</span>Alt fra indvendig rengøring basis</div>
+        </div>
+      </div>
+
+      <div class="pakke-card premium">
+        <span class="pakke-label">Premium</span>
+        <h3>Full detail premium</h3>
+        <div class="prices">
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">L</span>Lille</span>
+            <span class="price-amount">1.199 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">M</span>Mellem</span>
+            <span class="price-amount">1.399 kr</span>
+          </div>
+          <div class="price-row">
+            <span class="price-size"><span class="size-tag">S</span>Stor / SUV</span>
+            <span class="price-amount">1.649 kr</span>
+          </div>
+        </div>
+        <div class="includes-section">
+          <p class="includes-label">Alt fra basis, plus</p>
+          <div class="include-item"><span class="check-blue">✓</span>Sæderens inkluderet</div>
+          <div class="include-item"><span class="check-blue">✓</span>Læderbehandling inkluderet</div>
+          <div class="include-item"><span class="check-blue">✓</span>Plastikpleje inkluderet</div>
+        </div>
+        <div class="saving-note">Tilkøb enkeltvis = op til 550 kr ekstra — her er alt med</div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- TILKØB -->
+<div class="tilkoeb-section">
+  <div class="tilkoeb-box">
+    <h2>Tilkøb</h2>
+    <p class="sub">Kan tilføjes til alle pakker ved booking</p>
+    <div class="tilkoeb-grid">
+      <div class="tilkoeb-item">
+        <span class="tilkoeb-name">Sæderens</span>
+        <span class="tilkoeb-price">199 kr</span>
+      </div>
+      <div class="tilkoeb-item">
+        <span class="tilkoeb-name">Voksbehandling</span>
+        <span class="tilkoeb-price">199 kr</span>
+      </div>
+      <div class="tilkoeb-item">
+        <span class="tilkoeb-name">Fjernelse af hundehår</span>
+        <span class="tilkoeb-price">149 kr</span>
+      </div>
+      <div class="tilkoeb-item">
+        <span class="tilkoeb-name">Læderbehandling</span>
+        <span class="tilkoeb-price">149 kr</span>
+      </div>
+      <div class="tilkoeb-item">
+        <span class="tilkoeb-name">Plastikpleje</span>
+        <span class="tilkoeb-price">149 kr</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KONTAKT -->
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-left">
+      <h2>Kontakt os</h2>
+      <p>Har du spørgsmål eller vil du booke en tid til bilrengøring? Kontakt os – vi svarer hurtigt.</p>
+      <div class="contact-info">
+        <p><strong>Telefon:</strong> <a href="tel:+4529729695">29 72 96 95</a></p>
+        <p><strong>Email:</strong> <a href="mailto:svendborgbildetail@gmail.com">svendborgbildetail@gmail.com</a></p>
+        <p><strong>Område:</strong> Svendborg & Omegn</p>
+      </div>
+      <a href="kontakt.html" class="contact-btn">Kontakt os</a>
+    </div>
+    <div class="contact-right">
+      <h3>Telefontider</h3>
+      <div class="hours">
+        <div class="hour-row"><span>Mandag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Tirsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Onsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Torsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Fredag</span><span>14:00 – 17:00</span></div>
+        <div class="hour-row"><span>Lørdag</span><span>12:00 – 15:00</span></div>
+        <div class="hour-row"><span>Søndag</span><span>Lukket</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Svendborg Bildetail - Bilklargøring i Svendborg</p>
+</footer>
+
+</body>
+</html>
