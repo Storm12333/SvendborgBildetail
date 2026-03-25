@@ -103,7 +103,7 @@ nav a:hover::after {
 
 /* HERO (ingen video) */
 .hero {
-  background: #111;
+  background: #0c0c0c;
   padding: 0px 00px 00px;
   text-align: center;
 
@@ -137,10 +137,49 @@ main {
   margin: auto;
   text-align: center;
 }
-.services {
+
+/* ROWS */
+.service-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* PREMIUM ROW CENTERED */
+.premium-row {
+  display: flex;
+  justify-content: center; /* centrerer rowen */
+  gap: 30px;               /* afstand mellem kortene */
+  margin-bottom: 30px;
+}
+
+/* Sæt fast max-width på premium cards */
+.card.premium {
+  width: 300px;            /* du kan justere bredden her */
+  max-width: 90%;           /* på mobile */
+}
+
+.card.premium h3 {
+  color: #ffd700;
+}
+
+/* ekstra glow på hover */
+.card.premium:hover {
+  border-color: #fff;
+  box-shadow: 0 0 40px rgba(255,215,0,0.35);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .service-row {
+    grid-template-columns: 1fr;
+  }
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   margin-top: 30px;
 }
 
@@ -275,6 +314,8 @@ color:#000;
 }
 
 
+
+
 /* HOURS */
 
 .contact-right{
@@ -370,34 +411,46 @@ margin-right:auto;
 </div>
 
 <main>
-  <div class="services">
+  
+<div class="services">
 
-<a class="card" href="udvendig-vask.html">
-  <h3>🚗 Udvendig vask</h3>
-  <br>
-  <div class="price">Fra 299 kr</div>
-  <br>
-  <div class="readmore">Læs mere →</div>
-</a>
+  <!-- BASIC SERVICES -->
+  <div class="service-row">
+    <a class="card" href="udvendig-vask.html">
+      <h3>🚗 Udvendig vask</h3>
+      <div class="price">Fra 299 kr</div>
+      <div class="readmore">Læs mere →</div>
+    </a>
 
-<a class="card" href="interiør-rengøring.html">
-  <h3>🧼 Indvendig rengøring</h3>
-  <br>
-  <div class="price">Fra 549 kr</div>
-  <br>
-  <div class="readmore">Læs mere →</div>
-</a>
+    <a class="card" href="interiør-rengøring.html">
+      <h3>🧼 Indvendig rengøring - Standard</h3>
+      <div class="price">Fra 549 kr</div>
+      <div class="readmore">Læs mere →</div>
+    </a>
 
-<a class="card" href="full-detail.html">
-  <h3>✨ Full Detail</h3>
-  <br>
-  <div class="price">Fra 749 kr</div>
-  <br>
-  <div class="readmore">Læs mere →</div>
-</a>
+    <a class="card" href="full-detail.html">
+      <h3>✨ Full Detail - Standard</h3>
+      <div class="price">Fra 849 kr</div>
+      <div class="readmore">Læs mere →</div>
+    </a>
+  </div>
+
+  <!-- PREMIUM SERVICES -->
+  <div class="service-row premium-row">
+    <a class="card premium" href="full-detail-premium.html">
+      <h3>💎 Premium Full Detail</h3>
+      <div class="price">Fra 1249 kr</div>
+      <div class="readmore">Læs mere →</div>
+    </a>
+
+    <a class="card premium" href="interiør-rengøring-premium.html">
+      <h3>💎 Premium Indvendig rengøring</h3>
+      <div class="price">Fra 999 kr</div>
+      <div class="readmore">Læs mere →</div>
+    </a>
+  </div>
 
 </div>
-
 
 
 </main>
