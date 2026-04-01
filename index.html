@@ -24,13 +24,26 @@
   "image": "https://svendborgbildetail.dk/Billeder/cirkellogo123.png",
   "url": "https://svendborgbildetail.dk/",
   "telephone": "+4529729695",
+  "email": "svendborgbildetail@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Svendborg",
+    "postalCode": "5700",
     "addressCountry": "DK"
   },
-  "areaServed": ["Svendborg", "Tåsinge", "Thurø"],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 55.0607,
+    "longitude": 10.6029
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Svendborg" },
+    { "@type": "Place", "name": "Tåsinge" },
+    { "@type": "Place", "name": "Thurø" }
+  ],
   "priceRange": "$$",
+  "currenciesAccepted": "DKK",
+  "paymentAccepted": "Cash, MobilePay",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61580811698012"
   ],
@@ -53,7 +66,70 @@
       "opens": "12:00",
       "closes": "15:00"
     }
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bilrengøring services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Udvendig bilvask" }, "priceCurrency": "DKK" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Indvendig bilrengøring" }, "priceCurrency": "DKK" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fuld bildetailing" }, "priceCurrency": "DKK" }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Bilrengøring og bildetailing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Svendborg Bildetail",
+    "url": "https://svendborgbildetail.dk/"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Svendborg" },
+    { "@type": "Place", "name": "Tåsinge" },
+    { "@type": "Place", "name": "Thurø" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Vores services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Udvendig bilvask",
+          "description": "Professionel udvendig bilvask der fjerner snavs, salt og skidt fra lak, hjul og karrosseri.",
+          "url": "https://svendborgbildetail.dk/udvendig-vask.html"
+        },
+        "priceCurrency": "DKK"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Indvendig bilrengøring",
+          "description": "Grundig indvendig rengøring med støvsugning, rengøring af paneler og pleje af overflader.",
+          "url": "https://svendborgbildetail.dk/interiør-rengøring.html"
+        },
+        "priceCurrency": "DKK"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fuld bildetailing",
+          "description": "Komplet bildetailing indvendig og udvendig – din bil fremstår som ny.",
+          "url": "https://svendborgbildetail.dk/full-detail.html"
+        },
+        "priceCurrency": "DKK"
+      }
+    ]
+  }
 }
 </script>
 
