@@ -3,4 +3,4 @@ Allow: /
  
 Disallow: /privacy.html
  
-Sitemap: https://svendborgbildetail.dk/sitemap.xml
+Sitemap: https://www.svendborgbildetail.dk/sitemap.xml
