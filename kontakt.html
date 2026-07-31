@@ -16,7 +16,9 @@
   <link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt os for professionel bil rengøring | Svendborg Bildetail</title>
+  <meta name="description" content="Kontakt Svendborg Bildetail for mobil bilrengøring i Svendborg, Tåsinge og Thurø. Ring på 29 72 96 95, skriv en mail, eller book direkte online.">
 
 <script type="application/ld+json">
 {
@@ -33,347 +35,202 @@
   }
 }
 </script>
- 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Forside",
-      "item": "https://www.svendborgbildetail.dk/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Kontakt",
-      "item": "https://www.svendborgbildetail.dk/kontakt.html"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Forside", "item": "https://www.svendborgbildetail.dk/" },
+    { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://www.svendborgbildetail.dk/kontakt.html" }
   ]
 }
 </script>
 
   <style>
-   body{
-margin:0;
-font-family:system-ui,-apple-system,sans-serif;
-background:linear-gradient(180deg,#0a0a0a 0%,#111 40%,#0a0a0a 100%);
-color:#fff;
-line-height:1.6;
+:root{
+  --bg-0:#0a0a0a; --bg-1:#111; --bg-card:rgba(30,30,30,0.75);
+  --border:rgba(255,255,255,0.08); --accent:#7fa8ff; --text-dim:#bbb; --radius:16px;
 }
+*{ box-sizing:border-box; }
+body{
+  margin:0; font-family:system-ui,-apple-system,sans-serif;
+  background:linear-gradient(180deg,var(--bg-0) 0%,var(--bg-1) 40%,var(--bg-0) 100%);
+  color:#fff; line-height:1.6;
+}
+a{ color:inherit; }
 
 /* HEADER */
-
 header{
-position:relative;
-width:100%;
-z-index:10;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(8px);
-border-bottom:1px solid #222;
-padding:20px 50px;
-box-sizing:border-box;
-display:flex;
-flex-direction:column;
-align-items:center;
+  position:sticky; top:0; width:100%; z-index:100;
+  background:rgba(10,10,10,0.92); backdrop-filter:blur(8px);
+  border-bottom:1px solid #222; padding:14px 30px; box-sizing:border-box;
 }
-
-.header-content{
-width:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-}
-
-.logo{
-height:120px;
-width:auto;
-display:block;
-position:absolute;
-left:20px;
-top:50%;
-transform:translateY(-50%);
-}
-
-.header-text{
-text-align:center;
-}
-
-.header-text h1{
-margin:0;
-font-size:2.5em;
-color:#e6f0ff;
-}
-
-.header-text p{
-margin:0;
-font-size:1.2em;
-color:#ccc;
-}
-
-nav{
-margin-top:10px;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-position:relative;
-}
-
-nav a::after{
-content:"";
-position:absolute;
-bottom:-4px;
-left:0;
-width:0%;
-height:2px;
-background:#7fa8ff;
-transition:width .3s;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-
-/* MAIN */
-
-main{
-padding:60px 20px 120px;
-max-width:900px;
-margin:auto;
-text-align:center;
-}
-
-main h1{
-font-size:2rem;
-color:#e6f0ff;
-}
-
-/* KONTAKT */
-
-.Kontakter{
-font-size:1.2rem;
-margin-top:30px;
-}
-
-.mailknap{
-display:inline-block;
-padding:18px 40px;
-border:1px solid #fff;
-color:#fff;
-text-decoration:none;
-font-weight:600;
-letter-spacing:1px;
-transition:all .25s;
-margin-top:30px;
-}
-
-.mailknap:hover{
-background:#fff;
-color:#000;
-transform:translateY(-4px);
-}
-
-/* FOOTER */
-
-footer{
-border-top:1px solid #222;
-text-align:center;
-padding:40px 20px;
-font-size:.9em;
-color:#aaa;
-background:#111;
-}
-
-.contact-section{
-padding:90px 20px;
-background:#0d0d0d;
-border-top:1px solid #222;
-}
-
-.contact-container{
-max-width:1200px;
-margin:0 auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:start;
-}
-
-.contact-left h2{
-font-size:2.3rem;
-margin-bottom:15px;
-}
-
-.contact-left p{
-color:#bbb;
-margin-bottom:25px;
-max-width:420px;
-}
-
-.contact-info p{
-margin:8px 0;
-font-size:1rem;
-}
-
-.contact-info a{
-color:#fff;
-text-decoration:none;
-border-bottom:1px solid #444;
-}
-
-.contact-info a:hover{
-border-color:#fff;
-}
-
-.contact-btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 35px;
-border:1px solid #fff;
-text-decoration:none;
-color:#fff;
-font-weight:600;
-transition:0.25s;
-}
-
-.contact-btn:hover{
-background:#fff;
-color:#000;
-}
-
-
-/* HOURS */
-
-.contact-right{
-background:#111;
-border:1px solid #222;
-border-radius:14px;
-padding:35px;
-}
-
-.contact-right h3{
-margin-top:0;
-margin-bottom:20px;
-font-size:1.6rem;
-}
-
-.hours{
-display:flex;
-flex-direction:column;
-gap:12px;
-}
-
-.hour-row{
-display:flex;
-justify-content:space-between;
-border-bottom:1px solid #222;
-padding-bottom:8px;
-font-size:0.95rem;
-color:#ddd;
-}
-
-.ba-container-border {
-  border: 2px solid #ffffff;
-  border-radius: 16px;
-  padding: 15px;
-  margin: 10px;
+.header-content{ width:100%; max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.logo-link{ display:flex; align-items:center; flex-shrink:0; }
+.logo{ height:60px; width:auto; display:block; }
+.header-text{ text-align:left; }
+.header-text h1{ margin:0; font-size:1.3em; color:#e6f0ff; font-weight:700; }
+.header-text p{ margin:0; font-size:0.85em; color:#999; }
+nav.main-nav{ display:flex; align-items:center; gap:28px; }
+nav.main-nav a{ color:white; text-decoration:none; font-weight:600; font-size:0.95em; position:relative; white-space:nowrap; }
+nav.main-nav a::after{ content:""; position:absolute; bottom:-4px; left:0; width:0%; height:2px; background:var(--accent); transition:width 0.3s; }
+nav.main-nav a:hover::after{ width:100%; }
+.nav-book-btn{ background:var(--accent); color:#0a0a0a !important; padding:10px 20px; border-radius:8px; font-weight:700 !important; }
+.nav-book-btn::after{ display:none; }
+.hamburger{ display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0; z-index:200; }
+.hamburger span{ display:block; height:2px; width:100%; background:#fff; transition:0.3s; }
+.hamburger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+@media(max-width:860px){
+  .header-text p{ display:none; } .header-text h1{ font-size:1.05em; } .logo{ height:46px; }
+  .hamburger{ display:flex; }
+  nav.main-nav{
+    position:fixed; top:0; right:0; height:100vh; width:min(78vw,320px);
+    background:#0d0d0d; border-left:1px solid #222;
+    flex-direction:column; align-items:flex-start; justify-content:flex-start;
+    padding:100px 30px 30px; gap:26px;
+    transform:translateX(100%); transition:transform 0.3s ease;
   }
+  nav.main-nav.open{ transform:translateX(0); }
+  nav.main-nav a{ font-size:1.1em; }
+  .nav-book-btn{ margin-top:10px; text-align:center; width:100%; }
+  .nav-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:90; }
+  .nav-overlay.open{ display:block; }
+}
 
+/* PAGE HERO */
+.page-hero{ max-width:900px; margin:0 auto; padding:50px 20px 10px; text-align:center; }
+.page-hero h2{ font-size:2.1rem; color:#e6f0ff; margin:0 0 10px; }
+.page-hero p{ color:var(--text-dim); font-size:1.05rem; max-width:560px; margin:0 auto; }
 
-/* MOBILE */
+/* QUICK CONTACT CARDS */
+.quick-contact{
+  max-width:1000px; margin:34px auto 10px; padding:0 20px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+}
+.qc-card{
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
+  padding:26px 20px; text-align:center; text-decoration:none; color:inherit;
+  transition:all 0.25s;
+}
+.qc-card:hover{ border-color:var(--accent); transform:translateY(-4px); }
+.qc-icon{ font-size:1.8rem; margin-bottom:10px; }
+.qc-label{ font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px; color:#999; margin-bottom:6px; }
+.qc-value{ font-size:1.05rem; font-weight:700; color:#fff; word-break:break-word; }
+@media(max-width:700px){ .quick-contact{ grid-template-columns:1fr; } }
 
+/* BOOKING */
+.booking-section{ max-width:1000px; margin:50px auto 10px; padding:0 20px; }
+.booking-section h3{ font-size:1.4rem; color:#e6f0ff; margin-bottom:6px; text-align:center; }
+.booking-section .sub{ color:var(--text-dim); font-size:0.95rem; text-align:center; margin:0 0 20px; }
+.booking-frame{
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
+  padding:8px; overflow:hidden;
+}
+.booking-frame iframe{
+  width:100%; height:900px; border:none; border-radius:12px; display:block; background:#0d0d0d;
+}
+.booking-fallback{ text-align:center; margin-top:14px; }
+.booking-fallback a{ color:var(--accent); font-weight:600; text-decoration:underline; font-size:0.9rem; }
+@media(max-width:700px){ .booking-frame iframe{ height:700px; } }
+
+/* CONTACT + HOURS */
+.contact-section{ padding:70px 20px 40px; }
+.contact-container{ max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+.contact-left h2{ font-size:2.1rem; margin-bottom:15px; }
+.contact-left p{ color:#bbb; margin-bottom:25px; max-width:420px; }
+.contact-info p{ margin:8px 0; font-size:1rem; }
+.contact-info a{ color:#fff; text-decoration:none; border-bottom:1px solid #444; }
+.contact-info a:hover{ border-color:#fff; }
+.contact-right{ background:#111; border:1px solid #222; border-radius:14px; padding:35px; }
+.contact-right h3{ margin-top:0; margin-bottom:20px; font-size:1.6rem; }
+.hours{ display:flex; flex-direction:column; gap:12px; }
+.hour-row{ display:flex; justify-content:space-between; border-bottom:1px solid #222; padding-bottom:8px; font-size:0.95rem; color:#ddd; }
 @media(max-width:768px){
-
-.contact-container{
-grid-template-columns:1fr;
-gap:40px;
+  .contact-container{ grid-template-columns:1fr; gap:40px; }
+  .contact-left{ text-align:center; }
+  .contact-left p{ margin-left:auto; margin-right:auto; }
 }
 
-.contact-left{
-text-align:center;
-}
+footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; font-size:0.9em; color:#aaa; background:#111; }
 
-.contact-left p{
-margin-left:auto;
-margin-right:auto;
-}
-
-}
-
-/* MOBILE */
-
+/* STICKY MOBILE CTA */
+.mobile-cta-bar{ display:none; }
 @media(max-width:768px){
-
-.logo{
-position:static;
-height:70px;
-transform:none;
-margin-bottom:10px;
+  .mobile-cta-bar{ display:flex; position:fixed; bottom:0; left:0; right:0; z-index:150; background:#0a0a0a; border-top:1px solid #222; padding:10px 14px; gap:10px; }
+  .mobile-cta-bar a{ flex:1; text-align:center; padding:13px 10px; border-radius:10px; font-weight:700; font-size:0.92rem; text-decoration:none; }
+  .mobile-cta-bar .call{ border:1px solid #444; color:#fff; }
+  .mobile-cta-bar .book{ background:var(--accent); color:#0a0a0a; }
 }
-
-.header-text h1{
-font-size:1.6em;
-}
-
-nav{
-display:none;
-}
-
-main h1{
-font-size:1.5rem;
-}
-
-}
-
-
   </style>
 </head>
 <body>
+
 <header>
   <div class="header-content">
-    <a href="index.html">
-      <img src="Billeder/svbbd_hvidtlogo.png" alt="Svendborg Bildetailing Logo" class="logo">
+    <a href="index.html" class="logo-link">
+      <img src="Billeder/svbbd_hvidtlogo.png" alt="Svendborg Bildetail logo" class="logo">
     </a>
-
     <div class="header-text">
-      <h1>Svendborg Bildetail</h1>
-      <p>Vi giver din bil nyt liv!</p>
+      <h1>Kontakt os</h1>
+      <p>Vi svarer hurtigt – ring, skriv eller book direkte</p>
     </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Åbn menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="services.html">Services</a>
+      <a href="omos.html">Om os</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://svendborg-bildetail.planway.com/" class="nav-book-btn">Book nu</a>
+    </nav>
   </div>
-
-  <nav>
-    <a href="services.html">Services</a>
-    <a href="omos.html">Om os</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
 </header>
+<div class="nav-overlay" id="navOverlay"></div>
 
-  <main>
-    <h1>
-       Kontakt os for bilrengøring i Svendborg – book tid hos Svendborg Bildetail
-    </h1>
-    <div class="Kontakter" style="padding-top: 45px;">
-    <h2>Telefon: +45 29 72 96 95</p>
-    <p>Mail: svendborgbildetail@gmail.com</p>
-    </div>
-  </main>
-  <iframe src="https://svendborg-bildetail.planway.com" width="100%" height="1100px" frameBorder="0"></iframe>
+<div class="page-hero">
+  <h2>Kontakt os for bilrengøring i Svendborg</h2>
+  <p>Har du spørgsmål, eller vil du booke en tid til bilrengøring? Vi kører til dig i Svendborg, Tåsinge og Thurø.</p>
+</div>
 
-  <section class="contact-section">
+<div class="quick-contact">
+  <a href="tel:+4529729695" class="qc-card">
+    <div class="qc-icon">📞</div>
+    <div class="qc-label">Ring til os</div>
+    <div class="qc-value">29 72 96 95</div>
+  </a>
+  <a href="mailto:svendborgbildetail@gmail.com" class="qc-card">
+    <div class="qc-icon">✉️</div>
+    <div class="qc-label">Skriv en mail</div>
+    <div class="qc-value">svendborgbildetail@gmail.com</div>
+  </a>
+  <a href="https://svendborg-bildetail.planway.com/" class="qc-card" target="_blank" rel="noopener">
+    <div class="qc-icon">📅</div>
+    <div class="qc-label">Book direkte</div>
+    <div class="qc-value">Åbn bookingsystem</div>
+  </a>
+</div>
+
+<div class="booking-section">
+  <h3>Book en tid online</h3>
+  <p class="sub">Vælg service, størrelse og tidspunkt direkte herunder</p>
+  <div class="booking-frame">
+    <iframe src="https://svendborg-bildetail.planway.com" loading="lazy" title="Book en tid hos Svendborg Bildetail"></iframe>
+  </div>
+  <div class="booking-fallback">
+    <a href="https://svendborg-bildetail.planway.com/" target="_blank" rel="noopener">Åbner booking ikke korrekt? Klik her for at åbne den i et nyt vindue →</a>
+  </div>
+</div>
+
+<section class="contact-section">
   <div class="contact-container">
 
     <div class="contact-left">
-      <h2>Kontakt os</h2>
-      <p>Har du spørgsmål eller vil du booke en tid til bilrengøring?  
+      <h2>Skriv til os</h2>
+      <p>Har du spørgsmål eller vil du booke en tid til bilrengøring?
       Kontakt os – vi svarer hurtigt.</p>
 
       <div class="contact-info">
@@ -381,57 +238,50 @@ font-size:1.5rem;
         <p><strong>Email:</strong> <a href="mailto:svendborgbildetail@gmail.com">svendborgbildetail@gmail.com</a></p>
         <p><strong>Område:</strong> Svendborg & Omegn</p>
       </div>
-
-      <a href="kontakt.html" class="contact-btn">Kontakt os</a>
     </div>
-
 
     <div class="contact-right">
       <h3>Telefontider</h3>
 
       <div class="hours">
-        <div class="hour-row">
-          <span>Mandag</span>
-          <span>14:00 – 18:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Tirsdag</span>
-          <span>14:00 – 18:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Onsdag</span>
-          <span>14:00 – 18:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Torsdag</span>
-          <span>14:00 – 18:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Fredag</span>
-          <span>14:00 – 17:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Lørdag</span>
-          <span>12:00 – 15:00</span>
-        </div>
-
-        <div class="hour-row">
-          <span>Søndag</span>
-          <span>Lukket</span>
-        </div>
+        <div class="hour-row"><span>Mandag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Tirsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Onsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Torsdag</span><span>14:00 – 18:00</span></div>
+        <div class="hour-row"><span>Fredag</span><span>14:00 – 17:00</span></div>
+        <div class="hour-row"><span>Lørdag</span><span>12:00 – 15:00</span></div>
+        <div class="hour-row"><span>Søndag</span><span>Lukket</span></div>
       </div>
     </div>
 
   </div>
 </section>
 
-  <footer>
-    <p>&copy; 2026 Svendborg Bildetail</p>
-  </footer>
+<footer>
+  <p>© 2026 Svendborg Bildetail</p>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:+4529729695" class="call">Ring</a>
+  <a href="https://svendborg-bildetail.planway.com/" class="book">Book nu</a>
+</div>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mainNav = document.getElementById('mainNav');
+  const navOverlay = document.getElementById('navOverlay');
+  function toggleNav(){
+    const isOpen = mainNav.classList.toggle('open');
+    navOverlay.classList.toggle('open', isOpen);
+    hamburgerBtn.classList.toggle('open', isOpen);
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  }
+  hamburgerBtn.addEventListener('click', toggleNav);
+  navOverlay.addEventListener('click', toggleNav);
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => { if (mainNav.classList.contains('open')) toggleNav(); });
+  });
+</script>
+
 </body>
 </html>
