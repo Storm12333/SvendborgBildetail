@@ -814,9 +814,9 @@ margin-right:auto;
 </header>
 
 <section class="hero">
-  <video  preload="none" muted="" playsinline="" class="hero-video top-video" id="heroVideo1" src="video/spuling.mp4" style="opacity: 1;"></video>
-  <video preload="none" muted="" playsinline="" class="hero-video bottom-video" id="heroVideo2"></video>
+  <video autoplay preload="metadata" muted playsinline class="hero-video top-video" id="heroVideo1"></video>
 
+<video autoplay preload="metadata" muted playsinline class="hero-video bottom-video" id="heroVideo2"></video>
   <div class="hero-content">
     <h2>Professionel bilrengøring i Svendborg</h2>
     <h3>Svendborg Bildetail – Mobil bilpleje</h3>
@@ -1091,8 +1091,9 @@ function getNextVideo() {
 
 // Start første video
 video1.src = getNextVideo();
+video1.load();
 video1.style.opacity = 1;
-video1.play();
+video1.play().catch(console.error);
 
 function scheduleNextVideo(current, next) {
   // Start fade 2 sek før videoen slutter
@@ -1108,9 +1109,9 @@ function scheduleNextVideo(current, next) {
   const timeToFade = (duration - fadeTime) * 1000;
   setTimeout(() => {
     // Start næste video bagved
-    next.src = getNextVideo();
-    next.load();
-    next.play();
+   next.src = getNextVideo();
+next.load();
+next.play().catch(console.error);
     next.style.opacity = 0;
 
     // Fade
