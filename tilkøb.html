@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="da"><head>
 
 <!-- Google tag (gtag.js) -->
@@ -14,7 +15,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Vores tilkøb til en komplet bilrengøring| Indvendig &amp; udvendig bilrengøring</title>
+  <title>Tilkøb til bilrengøring i Svendborg | Sæderens, voks &amp; læder</title>
 <link rel="canonical" href="https://www.svendborgbildetail.dk/tilkøb.html">
  <meta name="description" content="Tilkøb til bilrengøring i Svendborg ✓ Sæderens 199 kr. ✓ Fjernelse af hundehår ✓ Voksbehandling ✓ Læderbehandling ✓ Plastikpleje. Tilpas din bilpleje.">
   
@@ -69,8 +70,9 @@ transform:translateY(-50%);
 text-align:center;
 }
 
-.header-text h1{
+.header-text .site-name{
 margin:0;
+font-weight:700;
 font-size:2.5em;
 color:#e6f0ff;
 }
@@ -372,7 +374,7 @@ transform:none;
 margin-bottom:10px;
 }
 
-.header-text h1{
+.header-text .site-name{
 font-size:1.6em;
 }
 
@@ -389,7 +391,15 @@ display:none;
 }
 
 }
-  </style>
+  
+/* ---- FAQ (samme udseende som service-siderne) ---- */
+.tilkoeb-faq{ max-width:1000px; margin:0 auto; padding:10px 20px 20px; }
+.tilkoeb-faq h2{ font-size:1.6em; margin-bottom:10px; }
+.tilkoeb-faq > p{ color:#bbb; margin:0 0 18px; }
+.faq-item{ border-bottom:1px solid #222; padding:18px 0; }
+.faq-item h4{ margin:0 0 8px; color:#fff; font-size:1.05rem; }
+.faq-item p{ margin:0; color:#bbb; font-size:0.95rem; }
+</style>
 </head>
 
 <body>
@@ -399,11 +409,11 @@ display:none;
 <div class="header-content">
 
 <a href="index.html">
-<img src="Billeder/svbbd_hvidtlogo.png" class="logo">
+<img src="Billeder/svbbd_hvidtlogo.png" class="logo" alt="Svendborg Bildetail logo">
 </a>
 
 <div class="header-text">
-<h1>Vores tilkøb til bilrengøring</h1>
+<p class="site-name">Vores tilkøb til bilrengøring</p>
 <p>Indvendig og udvendig bilrengøring – professionel bilpleje</p>
 </div>
 
@@ -429,7 +439,13 @@ display:none;
       <h2>Sæderens</h2>
       <p>Der gemmer sig enormt meget skidt og møg i dine bilsæder. Hvornår har du sidst fået dem gjort rent?</p>
       <p>Vores sæderens er en dybdegående behandling, der fjerner snavs, pletter og lugt fra bilens sæder. Vi bruger specialiserede rengøringsmidler og teknikker for at sikre, at dine sæder bliver rene og friske igen.</p>
-      <p>Vores sæderens tilkøbes for <strong style="color: rgb(250, 234, 0);">80,- pr. sæde.</strong></p>
+      <p>Behandlingen arbejder midlet ned i fibrene og trækker det op igen sammen med snavset. Det er derfor,
+      sæderens også rykker ved <strong>lugt</strong> og ikke kun ved de pletter, man kan se. Har der været børn,
+      hund eller mange år på bagen i bilen, er det typisk her, den største forskel ligger.</p>
+      <p>I langt de fleste tilfælde forsvinder pletterne helt. Meget gamle eller ætsende pletter kan i sjældne
+      tilfælde efterlade et svagt spor — det siger vi til, hvis vi kan se det på forhånd.</p>
+      <p>Vores sæderens tilkøbes for <strong style="color: rgb(250, 234, 0);">80,- pr. sæde.</strong>
+      Den er allerede inkluderet i vores to premiumpakker, så der skal du ikke betale for den oveni.</p>
     </div>
     <video autoplay loop muted playsinline>
       <source src="video/damprens.mp4" type="video/mp4">
@@ -448,40 +464,62 @@ display:none;
       <h2>Fjernelse af hundehår</h2>
       <p>Hunde hår sætter sig fast i bilens stof, sæder og tæpper, og kan være meget svært at få ud.</p>
       <p>Vi fjerner hundehåret så din bil bliver ren og frisk igen.</p>
+      <p>Hundehår kan ikke bare støvsuges væk. Hårene vikler sig ind i stoffets fibre og sætter sig fast med
+      statisk elektricitet, og derfor kræver det særskilt arbejde med redskaber, der trækker hårene ud i stedet
+      for at suge hen over dem.</p>
+      <p>Prisen afhænger af, hvor meget der er, og hvor godt det sidder fast. Vi vurderer det ved ankomst og
+      siger prisen, før vi går i gang — du får aldrig en højere regning, end vi har aftalt.</p>
       <p>Vores fjern af hundehår tilkøbes for <strong style="color: rgb(250, 234, 0);">149-399,- ekstra.</strong></p>
     </div>
-    <img src="Billeder/hundehårfør.JPG">
-    <img src="Billeder/hundehårefter.JPG">
+    <img src="Billeder/hundehårfør.JPG" loading="lazy" decoding="async" alt="Bilsæde fyldt med hundehår før rens i Svendborg">
+    <img src="Billeder/hundehårefter.JPG" loading="lazy" decoding="async" alt="Samme bilsæde efter fjernelse af hundehår hos Svendborg Bildetail">
   </div>
 
   <div class="voksbehandling">
     <div class="tekst">
       <h2>Voksbehandling</h2>
       <p>Voksbehandlingen hjælper med at beskytte bilens lak og give den en skinnende glans.</p>
+      <p>Voksen lægger sig som en barriere mellem lakken og alt det, der ellers sætter sig i den: vejsalt,
+      fugleklatter, insekter og vejstøv. Bilen bliver samtidig nemmere at holde ren, fordi snavset har
+      sværere ved at bide sig fast.</p>
+      <p>Laget slides gradvist af igen afhængigt af vejr og hvor ofte bilen vaskes. Det er især oplagt at få
+      lagt på, når saltsæsonen slutter, eller inden bilen skal sælges.</p>
       <p>Vores voksbehandling tilkøbes for <strong style="color: rgb(250, 234, 0);">185,- ekstra.</strong></p>
     </div>
-    <img src="Billeder/flot123.png">
-    <img src="Billeder/wax1.png">
+    <img src="Billeder/flot123.png" loading="lazy" decoding="async" alt="Blank billak efter voksbehandling i Svendborg">
+    <img src="Billeder/wax1.png" loading="lazy" decoding="async" alt="Voks påføres bilens lak som beskyttelse">
   </div>
 
   <div class="læderbehandling">
     <div class="tekst">
       <h2>Læderbehandling</h2>
       <p>Læderbehandlingen hjælper med at beskytte bilens læder og give den en skinnende glans.</p>
-      <p>Vores læderbehandling tilkøbes for <strong style="color: rgb(250, 234, 0);">125,- ekstra.</strong></p>
+      <p>Læder i en bil udsættes for sol, varme og friktion hver eneste dag. Uden behandling tørrer det
+      langsomt ud, bliver stift og revner til sidst — næsten altid først på førersædets sidevange, fordi det
+      er der, man glider ind og ud.</p>
+      <p>Behandlingen tilfører fugt tilbage i materialet og lægger et lag, der beskytter mod UV og slid. Det er
+      billig forsikring mod en dyr ompolstring, og den betaler sig mest at få gjort, <em>før</em> skaden er sket.</p>
+      <p>Vores læderbehandling tilkøbes for <strong style="color: rgb(250, 234, 0);">125,- ekstra.</strong>
+      Den er inkluderet i vores to premiumpakker.</p>
     </div>
-    <img src="Billeder/scrub-with-a-detailing-brush-until-foamy.jpg">
-    <img src="Billeder/leatherstar.png">
+    <img src="Billeder/scrub-with-a-detailing-brush-until-foamy.jpg" loading="lazy" decoding="async" alt="Lædersæde rengøres med detailing-børste før læderbehandling">
+    <img src="Billeder/leatherstar.png" loading="lazy" decoding="async" alt="Lædersæde efter læderbehandling i bil">
   </div>
 
   <div class="plastikpleje">
     <div class="tekst">
       <h2>Plastikpleje</h2>
       <p>Plastikplejen hjælper med at genskabe originaludseendet på din bil og give den et opfriskende look.</p>
-      <p>Vores plastikpleje tilkøbes for <strong style="color: rgb(250, 234, 0);">185,- ekstra.</strong></p>
+      <p>Det sorte plast i en kabine bliver gråt og støvet med årene. Det er UV-lys, der langsomt blegner
+      overfladen, og det sker så gradvist, at man sjældent lægger mærke til det selv — før man ser en bil,
+      hvor det er blevet gjort.</p>
+      <p>Rent visuelt er det ofte den behandling, der rykker mest for pengene, fordi den ændrer hele indtrykket
+      af kabinen på én gang. Også på biler med mange år på bagen.</p>
+      <p>Vores plastikpleje tilkøbes for <strong style="color: rgb(250, 234, 0);">185,- ekstra.</strong>
+      Den er inkluderet i vores to premiumpakker.</p>
     </div>
-    <img src="Billeder/topstar.png">
-    <img src="Billeder/plasticdetail.png">
+    <img src="Billeder/topstar.png" loading="lazy" decoding="async" alt="Bilens plastdele efter plastikpleje">
+    <img src="Billeder/plasticdetail.png" loading="lazy" decoding="async" alt="Plastikpleje genskaber farven på bilens plastpaneler">
   </div>
   
   
@@ -489,6 +527,41 @@ display:none;
   
 </section>
 
+
+  <div class="tilkoeb-faq">
+    <h2>Ofte stillede spørgsmål om tilkøb</h2>
+    <p>Det vi oftest bliver spurgt om, når folk skal vælge til.</p>
+
+    <div class="faq-item">
+      <h4>Kan tilkøb lægges på alle pakker?</h4>
+      <p>Ja. Alle fem tilkøb kan lægges oven på enhver pakke. Sæderens, læderbehandling og plastikpleje er dog allerede inkluderet i vores to premiumpakker, så dem skal du ikke betale for oveni.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Hvad koster sæderens?</h4>
+      <p>Sæderens koster 80 kr. pr. sæde. Det vil sige 160 kr. for forsæderne eller 400 kr. for alle fem sæder i en almindelig personbil.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Hvorfor svinger prisen på fjernelse af hundehår så meget?</h4>
+      <p>Fordi mængden gør det. Prisen ligger mellem 149 og 399 kr. afhængigt af, hvor meget hår der er, og hvor godt det sidder fast. Vi vurderer det ved ankomst og siger prisen, før vi går i gang.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Kan I fjerne alle pletter fra sæderne?</h4>
+      <p>I langt de fleste tilfælde ja. Meget gamle eller ætsende pletter kan i sjældne tilfælde efterlade et svagt spor – det siger vi til, hvis vi kan se det på forhånd.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Hvornår giver voksbehandling mest mening?</h4>
+      <p>Når saltsæsonen slutter, eller inden bilen skal sælges. Voksen lægger et beskyttende lag på lakken, som både giver glans og gør bilen nemmere at holde ren.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Skal jeg vælge tilkøb, eller er premium billigere?</h4>
+      <p>Skal du bruge to eller flere af sæderens, læderbehandling og plastikpleje, er en <a href="interiør-rengøring-premium.html" style="color:rgb(250,234,0)">premiumpakke</a> som regel billigere end at lægge dem på enkeltvis. Er du i tvivl, så ring – vi regner det ud med dig.</p>
+    </div>
+  </div>
 
   <div class="cta">
     <a href="mailto:svendborgbildetail@gmail.com"> Skriv nu, book tid i dag</a>
@@ -509,34 +582,50 @@ display:none;
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Hvad er forskellen på almindelig bilvask og fuld bildetailing?",
+      "name": "Kan tilkøb lægges på alle pakker?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fuld bildetailing er en dybdegående rengøring af både bilens indvendige og udvendige dele, hvor der fokuseres på detaljer, som ikke dækkes af en almindelig bilvask."
+        "text": "Ja. Alle fem tilkøb kan lægges oven på enhver pakke. Sæderens, læderbehandling og plastikpleje er dog allerede inkluderet i vores to premiumpakker, så dem skal du ikke betale for oveni."
       }
     },
     {
       "@type": "Question",
-      "name": "Hvor lang tid tager en fuld bildetailing?",
+      "name": "Hvad koster sæderens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En fuld bildetailing tager typisk mellem 2 og 3 timer, afhængigt af bilens størrelse og stand."
+        "text": "Sæderens koster 80 kr. pr. sæde. Det vil sige 160 kr. for forsæderne eller 400 kr. for alle fem sæder i en almindelig personbil."
       }
     },
     {
       "@type": "Question",
-      "name": "Hvem har gavn af fuld bildetailing?",
+      "name": "Hvorfor svinger prisen på fjernelse af hundehår så meget?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fuld bildetailing er ideel for bilejere, der ønsker maksimal pleje, skal sælge bilen eller vil opfriske bilens udseende."
+        "text": "Fordi mængden gør det. Prisen ligger mellem 149 og 399 kr. afhængigt af, hvor meget hår der er, og hvor godt det sidder fast. Vi vurderer det ved ankomst og siger prisen, før vi går i gang."
       }
     },
     {
       "@type": "Question",
-      "name": "Kan man tilkøbe ekstra behandlinger?",
+      "name": "Kan I fjerne alle pletter fra sæderne?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja, det er muligt at tilkøbe sæderens, fjernelse af hundehår og voksbehandling."
+        "text": "I langt de fleste tilfælde ja. Meget gamle eller ætsende pletter kan i sjældne tilfælde efterlade et svagt spor – det siger vi til, hvis vi kan se det på forhånd."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvornår giver voksbehandling mest mening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Når saltsæsonen slutter, eller inden bilen skal sælges. Voksen lægger et beskyttende lag på lakken, som både giver glans og gør bilen nemmere at holde ren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal jeg vælge tilkøb, eller er premium billigere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skal du bruge to eller flere af sæderens, læderbehandling og plastikpleje, er en premiumpakke som regel billigere end at lægge dem på enkeltvis. Er du i tvivl, så ring – vi regner det ud med dig."
       }
     }
   ]

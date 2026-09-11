@@ -34,6 +34,55 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvordan finder jeg min bilstørrelse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Har bilen 7 sæder, vælger du altid 7-personers – uanset bilens fysiske størrelse. Har bilen 5 sæder eller færre, vælger du kategori efter bilens fysiske størrelse: lille, mellem eller stor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tæller en stationcar som stor bil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typisk ja. En VW Passat stationcar eller lignende regnes som stor bil, fordi der er markant mere lakflade og mere kabine at komme igennem end på en almindelig sedan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad med en SUV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det afhænger af størrelsen. En kompakt SUV som en Peugeot 3008 eller Tesla Model Y regnes som stor bil. Har den 7 sæder, vælger du 7-personers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad hvis min bil ikke passer ind i en kategori?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Så ring til os på 29 72 96 95, så hjælper vi dig med at finde den rigtige pris. Vi kan også vurdere det ved ankomst – du får aldrig en højere pris, end vi har aftalt, uden at du har sagt ja først."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bliver prisen højere, hvis bilen er meget beskidt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kategorien ændrer sig ikke, men er bilen usædvanligt beskidt, kan vi anbefale en anden pakke i stedet – for eksempel premium frem for standard. Det siger vi til ved ankomst, og du bestemmer selv, om vi går videre."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 
 :root{
@@ -201,6 +250,14 @@ footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; fo
 .rule-box h3{ margin:0 0 8px; color:#fff; }
 .rule-box p{ margin:0; color:var(--text-dim); }
 
+
+/* ---- priser pr. kategori + FAQ ---- */
+.size-prices{ list-style:none; margin:14px 0 0; padding:0; border-top:1px solid #222; }
+.size-prices li{ display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px solid #1c1c1c; font-size:0.9rem; color:var(--text-dim); }
+.size-prices li span:last-child{ color:#fff; font-weight:700; white-space:nowrap; }
+.faq-item{ border-bottom:1px solid #1c1c1c; padding:18px 0; }
+.faq-item h4{ margin:0 0 8px; color:#fff; font-size:1.05rem; }
+.faq-item p{ margin:0; color:var(--text-dim); font-size:0.95rem; }
 </style>
 </head>
 
@@ -249,22 +306,26 @@ footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; fo
   <div class="size-cards">
     <div class="size-card">
       <h3>Lille bil</h3>
-      <p class="examples"><strong>Eksempler:</strong> VW Polo, Fiat 500, Toyota Aygo, Peugout 107, Citroen C1, Mini Cooper</p>
+      <p class="examples"><strong>Eksempler:</strong> VW Polo, Fiat 500, Toyota Aygo, Peugeot 107, Citroën C1, Mini Cooper</p>
+      <ul class="size-prices"><li><span>Indvendig rengøring</span><span>685 kr</span></li><li><span>Full Detail</span><span>1.060 kr</span></li><li><span>Premium indvendig</span><span>1.250 kr</span></li><li><span>Full Detail Premium</span><span>1.560 kr</span></li></ul>
     </div>
 
     <div class="size-card">
       <h3>Mellem bil</h3>
-      <p class="examples"><strong>Eksempler:</strong> VW Golf, Skoda Octavia, Toyota Corolla, Ford Focus, Opel Astra, BMW 1-serie/3-serie, Audi A3/A4, Peugout 208/308</p>
+      <p class="examples"><strong>Eksempler:</strong> VW Golf, Skoda Octavia, Toyota Corolla, Ford Focus, Opel Astra, BMW 1-serie/3-serie, Audi A3/A4, Peugeot 208/308</p>
+      <ul class="size-prices"><li><span>Indvendig rengøring</span><span>875 kr</span></li><li><span>Full Detail</span><span>1.185 kr</span></li><li><span>Premium indvendig</span><span>1.430 kr</span></li><li><span>Full Detail Premium</span><span>1.875 kr</span></li></ul>
     </div>
 
     <div class="size-card">
       <h3>Stor bil</h3>
-      <p class="examples"><strong>Eksempler:</strong> BMW 5-serie, Audi A6, Mercedes E-klasse, VW Passat stationcar, Peugout 3008, Tesla Model Y, Skoda Enyaq</p>
+      <p class="examples"><strong>Eksempler:</strong> BMW 5-serie, Audi A6, Mercedes E-klasse, VW Passat stationcar, Peugeot 3008, Tesla Model Y, Skoda Enyaq</p>
+      <ul class="size-prices"><li><span>Indvendig rengøring</span><span>975 kr</span></li><li><span>Full Detail</span><span>1.299 kr</span></li><li><span>Premium indvendig</span><span>1.549 kr</span></li><li><span>Full Detail Premium</span><span>2.049 kr</span></li></ul>
     </div>
 
     <div class="size-card">
       <h3>7-personers</h3>
       <p class="examples"><strong>Eksempler:</strong> VW Touran/Sharan, Ford Galaxy, Seat Alhambra, Renault Espace, Mercedes EQV</p>
+      <ul class="size-prices"><li><span>Indvendig rengøring</span><span>1.125 kr</span></li><li><span>Full Detail</span><span>1.435 kr</span></li><li><span>Premium indvendig</span><span>1.750 kr</span></li><li><span>Full Detail Premium</span><span>2.310 kr</span></li></ul>
     </div>
   </div>
 
@@ -273,6 +334,65 @@ footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; fo
     <a href="tel:+4529729695" style="color:#fff; text-decoration:underline;">29 72 96 95</a>,
     så hjælper vi dig med at finde den rigtige pris – eller vurderer det ved ankomst.
   </p>
+
+
+  <div style="margin-top:44px;">
+    <h3>Hvorfor afhænger prisen af bilens størrelse?</h3>
+    <p style="color:var(--text-dim);">Fordi arbejdet gør det. En 7-personers bil har flere sæder at støvsuge
+    og rense, flere ruder at pudse, en større lakflade at vaske i hånden og flere kroge, der skal nås ind i.
+    Der kan sagtens gå dobbelt så lang tid på en Mercedes EQV som på en VW Polo, og det er den forskel,
+    kategorierne dækker.</p>
+    <p style="color:var(--text-dim);">Vi kunne have lavet én pris for alle biler, men så ville ejerne af de
+    små biler betale for de stores arbejde. Det synes vi ikke er rimeligt.</p>
+  </div>
+
+  <div style="margin-top:34px;">
+    <h3>Hvad hvis bilen ligger mellem to kategorier?</h3>
+    <p style="color:var(--text-dim);">Det sker jævnligt, og så gør vi det enkle: vi vurderer den ved ankomst
+    og vælger den kategori, der passer til det faktiske arbejde. Du får prisen at vide, <strong>før</strong>
+    vi går i gang — aldrig bagefter, og aldrig højere end det, vi har aftalt, uden at du har sagt ja først.</p>
+    <p style="color:var(--text-dim);">Er du i tvivl, når du booker, så vælg den kategori du tror passer, eller
+    ring på <a href="tel:+4529729695" style="color:#fff; text-decoration:underline;">29 72 96 95</a>. Det tager
+    os 30 sekunder at afgøre det, hvis du siger mærke og model.</p>
+  </div>
+
+  <div style="margin-top:34px;">
+    <h3>Priser der ikke følger størrelsen</h3>
+    <p style="color:var(--text-dim);">To ting koster det samme uanset bil:
+    <a href="udvendig-vask.html" style="color:var(--accent)">udvendig bilvask</a> koster 375 kr, og
+    <a href="forlygtepolering.html" style="color:var(--accent)">polering af forlygter</a> koster 600 kr
+    pr. sæt. Det samme gælder vores <a href="tilkøb.html" style="color:var(--accent)">tilkøb</a> — sæderens
+    afregnes dog pr. sæde, så dér følger prisen alligevel indirekte bilens størrelse.</p>
+  </div>
+
+  <div style="margin-top:44px;">
+    <h3>Ofte stillede spørgsmål om bilstørrelser</h3>
+
+    <div class="faq-item">
+      <h4>Hvordan finder jeg min bilstørrelse?</h4>
+      <p>Har bilen 7 sæder, vælger du altid 7-personers – uanset bilens fysiske størrelse. Har bilen 5 sæder eller færre, vælger du kategori efter bilens fysiske størrelse: lille, mellem eller stor.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Tæller en stationcar som stor bil?</h4>
+      <p>Typisk ja. En VW Passat stationcar eller lignende regnes som stor bil, fordi der er markant mere lakflade og mere kabine at komme igennem end på en almindelig sedan.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Hvad med en SUV?</h4>
+      <p>Det afhænger af størrelsen. En kompakt SUV som en Peugeot 3008 eller Tesla Model Y regnes som stor bil. Har den 7 sæder, vælger du 7-personers.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Hvad hvis min bil ikke passer ind i en kategori?</h4>
+      <p>Så ring til os på 29 72 96 95, så hjælper vi dig med at finde den rigtige pris. Vi kan også vurdere det ved ankomst – du får aldrig en højere pris, end vi har aftalt, uden at du har sagt ja først.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Bliver prisen højere, hvis bilen er meget beskidt?</h4>
+      <p>Kategorien ændrer sig ikke, men er bilen usædvanligt beskidt, kan vi anbefale en anden pakke i stedet – for eksempel premium frem for standard. Det siger vi til ved ankomst, og du bestemmer selv, om vi går videre.</p>
+    </div>
+  </div>
 
   <div style="text-align:center; margin-top:34px;">
     <a href="services.html" class="btn-primary">← Tilbage til services</a>

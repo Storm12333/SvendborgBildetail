@@ -15,7 +15,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
-<title>Professionel bil rengøring i Svendborg | Vores services | Svendborg Bildetail</title>
+<title>Services | Bilpleje og bilrengøring i Svendborg</title>
 <link rel="canonical" href="https://www.svendborgbildetail.dk/services.html">
 <!-- RETTET: priserne matcher nu de faktiske priser på siden (var 299/549/749, reelt 375/685/1060) -->
 <meta name="description" content="Se alle vores services i Svendborg – udvendig bilvask fra 375 kr, indvendig rengøring fra 685 kr og full detail fra 1060 kr. Vi kommer til dig. Book online.">
@@ -23,6 +23,81 @@
 <meta property="og:description" content="Mobil bilpleje i Svendborg – vi kører til dig. Udvendig vask, indvendig rengøring og full detail fra 375 kr.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.svendborgbildetail.dk/services.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Forside", "item": "https://www.svendborgbildetail.dk/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.svendborgbildetail.dk/services.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Bilplejepakker hos Svendborg Bildetail",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Udvendig vask", "url": "https://www.svendborgbildetail.dk/udvendig-vask.html" },
+    { "@type": "ListItem", "position": 2, "name": "Indvendig rengøring", "url": "https://www.svendborgbildetail.dk/interi%C3%B8r-reng%C3%B8ring.html" },
+    { "@type": "ListItem", "position": 3, "name": "Full Detail", "url": "https://www.svendborgbildetail.dk/full-detail.html" },
+    { "@type": "ListItem", "position": 4, "name": "Premium Indvendig", "url": "https://www.svendborgbildetail.dk/interi%C3%B8r-reng%C3%B8ring-premium.html" },
+    { "@type": "ListItem", "position": 5, "name": "Premium Full Detail", "url": "https://www.svendborgbildetail.dk/full-detail-premium.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvilken pakke er den mest populære?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Full Detail. Den dækker hele bilen indvendigt og udvendigt i én omgang og er billigere end at booke indvendig og udvendig hver for sig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan jeg tilkøbe enkelte behandlinger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Sæderens, plastikpleje, voksbehandling, læderbehandling og fjernelse af hundehår kan lægges på enhver pakke. Priserne står på vores tilkøbsside."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad hvis min bil er meget beskidt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Så siger vi det til dig ved ankomst. Er bilen usædvanligt beskidt, rækker standardpakken typisk ikke, og vi anbefaler en premiumpakke i stedet – så du ikke betaler for en behandling, der ikke løser problemet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor lang tid tager en behandling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En typisk behandling tager mellem 2 og 3 timer afhængigt af pakke, bilens størrelse og hvor beskidt den er. Full Detail Premium kan tage op til 5 timer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Koster det ekstra, at I kører ud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Der er ingen transporttillæg i Svendborg, på Tåsinge eller Thurø. Bor du længere væk, så ring – så aftaler vi det på forhånd."
+      }
+    }
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -479,6 +554,15 @@ footer {
   .contact-left p{ margin-left:auto; margin-right:auto; }
 }
 
+/* ============ INDHOLDSSEKTIONER (samme udseende som service-siderne) ============ */
+.content-section{ max-width:1000px; margin:0 auto; padding:0 20px 50px; }
+.content-section h3{ font-size:1.4rem; color:#e6f0ff; margin-bottom:16px; }
+.content-section p{ color:var(--text-dim); margin:0 0 14px; }
+.content-section a{ color:var(--accent); }
+.faq-item{ border-bottom:1px solid #1c1c1c; padding:18px 0; }
+.faq-item h4{ margin:0 0 8px; color:#fff; font-size:1.05rem; }
+.faq-item p{ margin:0; color:var(--text-dim); font-size:0.95rem; }
+
 /* ============ STICKY MOBILE CTA ============ */
 .mobile-cta-bar{
   display:none;
@@ -638,6 +722,93 @@ footer {
     </div>
   </div>
 </main>
+
+<div class="content-section">
+  <h3>Hvilken pakke skal du vælge?</h3>
+  <p>De fleste er i tvivl om det samme: hvor meget skal der egentlig til? Her er den korte vejledning.</p>
+  <p><strong>Skal bilen bare være pæn udenpå</strong> – typisk fordi den er blevet snavset af vejsalt eller
+  en tur i sommerhuset – er <a href="udvendig-vask.html">udvendig vask</a> nok. Det er også den, folk
+  vælger som fast vedligeholdelse hver anden til hver fjerde uge.</p>
+  <p><strong>Er det kabinen, der trænger</strong>, mens lakken egentlig er fin, vælger du
+  <a href="interiør-rengøring.html">indvendig rengøring</a>. Det er den typiske pakke, når der har været
+  børn, madpakker eller hund i bilen.</p>
+  <p><strong>Skal hele bilen friskes op på én gang</strong>, er <a href="full-detail.html">Full Detail</a>
+  det rigtige – og billigere end at booke indvendig og udvendig hver for sig. Det er vores mest solgte
+  pakke, og den vælges oftest før et bilsalg eller lige efter et brugtbilskøb.</p>
+  <p><strong>Er bilen virkelig brugt</strong> – pletter i sæderne, lugt i kabinen, læder der er begyndt at
+  se tørt ud, eller plastdele der er blevet grå – rækker en rengøring ikke. Så skal materialerne behandles,
+  og det er præcis, hvad de to premiumpakker gør.</p>
+</div>
+
+<div class="content-section">
+  <h3>Forskellen på Standard og Premium</h3>
+  <p>Det er det spørgsmål, vi oftest får, og svaret er enklere end man tror.</p>
+  <p><strong>Standard er en rengøring.</strong> Vi fjerner det snavs, der er i og på bilen: støvsugning i
+  alle kroge, damprens af overflader, paneler, måtter, dørfalser og vinduer indefra – og udvendigt forvask,
+  håndvask og fælgrens.</p>
+  <p><strong>Premium behandler materialerne oveni.</strong> Her indgår sæderens, der trækker pletter og lugt
+  op af sædestoffet, læderbehandling der tilfører fugt tilbage i lædret, og plastikpleje der genskaber
+  farven i de plastdele, UV-lys har blegnet gennem årene.</p>
+  <p>Kort sagt: Standard gør bilen ren. Premium gør den velholdt. Er du i tvivl, så ring – vi siger det
+  ærligt, hvis du ikke har brug for den dyreste pakke.</p>
+</div>
+
+<div class="content-section">
+  <h3>Priserne følger bilens størrelse</h3>
+  <p>Der er markant mere arbejde i en 7-personers bil end i en VW Polo: flere sæder, flere ruder, større
+  lakflade og flere kroge at komme til. Derfor deler vi priserne op i fire kategorier – lille, mellem,
+  stor og 7-personers.</p>
+  <p>Tommelfingerreglen er enkel: har bilen <strong>7 sæder</strong>, vælger du altid 7-personers, uanset
+  hvor stor den fysisk er. Har den 5 sæder eller færre, vælger du efter bilens fysiske størrelse. Er du i
+  tvivl, kan du se konkrete bilmodeller i hver kategori i vores
+  <a href="bilstoerrelse.html">bilstørrelse-guide</a>.</p>
+  <p>Udvendig vask koster det samme uanset bilstørrelse, og det samme gælder
+  <a href="forlygtepolering.html">polering af forlygter</a>.</p>
+</div>
+
+<div class="content-section">
+  <h3>Alt foregår hjemme hos dig</h3>
+  <p>Uanset hvilken pakke du vælger, kører vi ud til din adresse i Svendborg, på Tåsinge eller Thurø. Du
+  skal ikke aflevere bilen nogen steder, og du skal ikke vente i en vaskehal.</p>
+  <p>Det eneste, du selv skal sørge for, er <strong>adgang til vand og el</strong> samt en plads, hvor bilen
+  kan holde stille imens – typisk indkørslen eller carporten. Maskiner, damprenser, kemi og alt andet udstyr
+  har vi med. Der er ingen transporttillæg inden for vores serviceområde.</p>
+  <p>Læs mere om, hvordan det fungerer i praksis, på siden om
+  <a href="mobil-bilpleje.html">mobil bilpleje</a>.</p>
+</div>
+
+<div class="content-section">
+  <h3>Ofte stillede spørgsmål om vores services</h3>
+
+  <div class="faq-item">
+    <h4>Hvilken pakke er den mest populære?</h4>
+    <p>Full Detail. Den dækker hele bilen indvendigt og udvendigt i én omgang og er billigere end at booke indvendig og udvendig hver for sig.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Kan jeg tilkøbe enkelte behandlinger?</h4>
+    <p>Ja. Sæderens, plastikpleje, voksbehandling, læderbehandling og fjernelse af hundehår kan lægges på enhver pakke. Priserne står på vores tilkøbsside.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Hvad hvis min bil er meget beskidt?</h4>
+    <p>Så siger vi det til dig ved ankomst. Er bilen usædvanligt beskidt, rækker standardpakken typisk ikke, og vi anbefaler en premiumpakke i stedet – så du ikke betaler for en behandling, der ikke løser problemet.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Hvor lang tid tager en behandling?</h4>
+    <p>En typisk behandling tager mellem 2 og 3 timer afhængigt af pakke, bilens størrelse og hvor beskidt den er. Full Detail Premium kan tage op til 5 timer.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Koster det ekstra, at I kører ud?</h4>
+    <p>Nej. Der er ingen transporttillæg i Svendborg, på Tåsinge eller Thurø. Bor du længere væk, så ring – så aftaler vi det på forhånd.</p>
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <a href="https://svendborg-bildetail.planway.com/" class="btn-book" style="display:inline-block; padding:14px 34px;">Book en tid</a>
+  </div>
+</div>
 
 <section class="contact-section">
   <div class="contact-container">

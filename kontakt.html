@@ -47,7 +47,56 @@
 }
 </script>
 
-  <style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvornår kan jeg få fat i jer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Telefontid er mandag til torsdag 14–18, fredag 14–17 og lørdag 12–15. Søndag har vi lukket. Onlinebooking og mail er åben døgnet rundt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad skal jeg skrive i en mail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bilens mærke og model, hvad du gerne vil have lavet, og hvor bilen står. Så kan vi svare med en pris og et forslag til tidspunkt med det samme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal jeg være hjemme, mens I arbejder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej, ikke nødvendigvis. Vi skal blot kunne komme til bilen og til vand og el. Aftal det med os, når du booker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor hurtigt svarer I?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du får svar samme dag, hvis du skriver eller ringer inden for vores åbningstid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Koster det ekstra, at I kører ud til mig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Der er ingen transporttillæg i Svendborg, på Tåsinge eller Thurø. Bor du længere væk, så ring – så aftaler vi det på forhånd."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
 :root{
   --bg-0:#0a0a0a; --bg-1:#111; --bg-card:rgba(30,30,30,0.75);
   --border:rgba(255,255,255,0.08); --accent:#7fa8ff; --text-dim:#bbb; --radius:16px;
@@ -164,7 +213,18 @@ footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; fo
   .mobile-cta-bar .call{ border:1px solid #444; color:#fff; }
   .mobile-cta-bar .book{ background:var(--accent); color:#0a0a0a; }
 }
-  </style>
+  
+/* ---- indholdssektioner + FAQ ---- */
+.content-section{ max-width:1000px; margin:0 auto; padding:0 20px 46px; }
+.content-section h3{ font-size:1.4rem; color:#e6f0ff; margin-bottom:14px; }
+.content-section p{ color:#bbb; margin:0 0 14px; }
+.content-section ul{ color:#bbb; margin:0 0 14px 20px; padding:0; }
+.content-section li{ margin-bottom:8px; }
+.content-section a{ color:#7fa8ff; }
+.faq-item{ border-bottom:1px solid #1c1c1c; padding:18px 0; }
+.faq-item h4{ margin:0 0 8px; color:#fff; font-size:1.05rem; }
+.faq-item p{ margin:0; color:#bbb; font-size:0.95rem; }
+</style>
 </head>
 <body>
 
@@ -222,6 +282,83 @@ footer{ border-top:1px solid #222; text-align:center; padding:40px 20px 90px; fo
   </div>
   <div class="booking-fallback">
     <a href="https://svendborg-bildetail.planway.com/" target="_blank" rel="noopener">Åbner booking ikke korrekt? Klik her for at åbne den i et nyt vindue →</a>
+  </div>
+</div>
+
+<div class="content-section">
+  <h3>Tre måder at få fat i os</h3>
+  <p><strong>Ring</strong> hvis du vil have svar med det samme, eller hvis du er i tvivl om, hvilken pakke
+  din bil har brug for. Vi har telefontid mandag til torsdag 14–18, fredag 14–17 og lørdag 12–15. Tiderne er
+  sene, fordi vi går på HHX i Svendborg om dagen — ringer du tidligere, kan vi ikke tage den.</p>
+  <p><strong>Skriv en mail</strong> hvis det ikke haster, eller hvis du vil have et konkret svar på skrift.
+  Skriv gerne bilens mærke og model samt hvad du gerne vil have lavet — så kan vi svare med en pris med det
+  samme i stedet for at skulle spørge om det først.</p>
+  <p><strong>Book online</strong> hvis du allerede ved, hvad du vil have. Bookingsystemet er åbent døgnet
+  rundt, også når vi sidder i skole, og du vælger selv service, bilstørrelse og tidspunkt.</p>
+</div>
+
+<div class="content-section">
+  <h3>Sådan foregår det, når du har booket</h3>
+  <p>Vi bekræfter din tid, og så kører vi ud til den adresse, du har opgivet. Vi medbringer selv maskiner,
+  damprenser, kemi, klude og alt andet udstyr — du skal ikke købe eller låne noget.</p>
+  <p>Det eneste, du skal sørge for, er:</p>
+  <ul>
+    <li>Adgang til <strong>vand</strong> — en udendørs hane er nok</li>
+    <li>Adgang til <strong>el</strong> — en stikkontakt vi kan nå</li>
+    <li>En <strong>plads</strong> hvor bilen kan holde stille i et par timer, typisk indkørslen eller carporten</li>
+  </ul>
+  <p>En typisk behandling tager 2–3 timer. Du behøver ikke være hjemme hele tiden, så længe vi kan komme til
+  bilen og til vand og el. De fleste går bare ind og laver noget andet imens.</p>
+</div>
+
+<div class="content-section">
+  <h3>Hvor vi kører ud</h3>
+  <p>Vi dækker <strong>Svendborg by, hele Tåsinge og Thurø</strong> samt den nærmeste omegn, og vi servicerer
+  kunder fra Sydfyn. Der er <strong>ingen transporttillæg</strong> inden for serviceområdet — prisen du ser,
+  er prisen du betaler.</p>
+  <p>Bor du lidt uden for, så ring i stedet for at gætte. Så siger vi ærligt, om det kan lade sig gøre, i
+  stedet for at overraske dig med et tillæg på regningen bagefter.</p>
+</div>
+
+<div class="content-section">
+  <h3>Er du i tvivl om, hvad du skal vælge?</h3>
+  <p>Det er langt de fleste, første gang de booker. Den korte version: skal bilen bare være pæn udenpå, er
+  <a href="udvendig-vask.html">udvendig vask</a> nok. Er det kabinen der trænger, vælger du
+  <a href="interiør-rengøring.html">indvendig rengøring</a>. Skal hele bilen friskes op på én gang — typisk
+  før et salg — er <a href="full-detail.html">Full Detail</a> det rigtige.</p>
+  <p>Er bilen virkelig brugt, med pletter i sæderne eller læder der er tørret ud, rækker en rengøring ikke,
+  og så skal du kigge på <a href="services.html">premiumpakkerne</a>. Du kan også se
+  <a href="bilstoerrelse.html">hvilken størrelseskategori din bil hører til</a>, så du booker til den rigtige
+  pris.</p>
+  <p>Og ellers: ring. Vi siger det ærligt, hvis du ikke har brug for den dyreste pakke.</p>
+</div>
+
+<div class="content-section">
+  <h3>Ofte stillede spørgsmål</h3>
+
+  <div class="faq-item">
+    <h4>Hvornår kan jeg få fat i jer?</h4>
+    <p>Telefontid er mandag til torsdag 14–18, fredag 14–17 og lørdag 12–15. Søndag har vi lukket. Onlinebooking og mail er åben døgnet rundt.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Hvad skal jeg skrive i en mail?</h4>
+    <p>Bilens mærke og model, hvad du gerne vil have lavet, og hvor bilen står. Så kan vi svare med en pris og et forslag til tidspunkt med det samme.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Skal jeg være hjemme, mens I arbejder?</h4>
+    <p>Nej, ikke nødvendigvis. Vi skal blot kunne komme til bilen og til vand og el. Aftal det med os, når du booker.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Hvor hurtigt svarer I?</h4>
+    <p>Du får svar samme dag, hvis du skriver eller ringer inden for vores åbningstid.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Koster det ekstra, at I kører ud til mig?</h4>
+    <p>Nej. Der er ingen transporttillæg i Svendborg, på Tåsinge eller Thurø. Bor du længere væk, så ring – så aftaler vi det på forhånd.</p>
   </div>
 </div>
 
