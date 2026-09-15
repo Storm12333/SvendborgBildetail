@@ -2,6 +2,12 @@
 <html lang="da">
   <head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- COOKIEBOT -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,33 +26,20 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1885228559542217');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1805275663993473&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1885228559542217&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
 
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- COOKIEBOT skal ligge FØRST, ellers kan den ikke blokere trackere før samtykke -->
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="32f9532f-e162-46ef-aad5-f98633f0c423" data-blockingmode="auto" type="text/javascript"></script>
-
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://connect.facebook.net">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WBTPSVMRTZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WBTPSVMRTZ');
-</script>
 
 <link rel="icon" href="Billeder/svbbd_hvidtlogo.png" type="image/x-icon">
 <link rel="canonical" href="https://www.svendborgbildetail.dk/">
@@ -230,27 +223,6 @@ src="https://www.facebook.com/tr?id=1805275663993473&ev=PageView&noscript=1"
 }
 </script>
 
-<!-- FACEBOOK PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1885228559542217');
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none" alt=""
-src="https://www.facebook.com/tr?id=1885228559542217&ev=PageView&noscript=1"/>
-</noscript>
-
-<!-- Cookiebot er flyttet øverst i <head>, så den kan blokere GA og Facebook Pixel
-     indtil brugeren har givet samtykke. Scriptet indsætter selv sit eget CSS ved kørsel. -->
-
 <style>
 /* GLOBAL RESET */
 body {
@@ -281,7 +253,7 @@ header .site-name{
   flex: 1;
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 700; /* var et <h1>, som browseren selv gjorde fed */
+  font-weight: 700;
   min-width: 0;
 }
 
@@ -340,8 +312,8 @@ nav.main-nav a:hover::after{ width:100%; }
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* fylder hele skærmen */
-  height: 100svh; /* mere præcis højde på mobil, ignoreres af browsere der ikke kender enheden */
+  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -357,7 +329,7 @@ nav.main-nav a:hover::after{ width:100%; }
   object-fit: cover;
   z-index: -2;
   opacity: 0;
-   transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .hero-video.top-video { opacity: 1; z-index: -1; }
 
@@ -377,12 +349,11 @@ nav.main-nav a:hover::after{ width:100%; }
   box-sizing: border-box;
   color: #fff;
 }
-/* H1 var før et h2 — margin-top sættes eksplicit til browserens gamle h2-værdi (0.83em),
-   så overskriften står præcis samme sted som før tag-skiftet. */
+
 .hero-content h1 { font-size: 3rem; margin: 0.83em 0 10px; }
-/* .hero-sub var før et h3 — her gengives browserens h3-standard præcist. */
 .hero-content .hero-sub { font-size: 1.17em; font-weight: bold; margin: 1em 0; }
 .hero-content p { font-size: 1.2rem; opacity: 0.9; }
+
 .cta {
   margin-top: 30px;
   display: inline-flex;
@@ -400,13 +371,14 @@ nav.main-nav a:hover::after{ width:100%; }
   line-height: 1.2;
   transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
+
 .cta:hover {
   background: rgba(255,255,255,0.10);
   border-color: #fff;
   transform: translateY(-2px);
 }
 
-/* Primaer knap - den vi gerne vil have folk til at trykke paa */
+/* Primaer knap */
 .cta-primary {
   background: #7fa8ff;
   border-color: #7fa8ff;
@@ -414,6 +386,7 @@ nav.main-nav a:hover::after{ width:100%; }
   font-weight: 700;
   box-shadow: 0 8px 24px rgba(127,168,255,0.28);
 }
+
 .cta-primary:hover {
   background: #9dbcff;
   border-color: #9dbcff;
@@ -421,7 +394,7 @@ nav.main-nav a:hover::after{ width:100%; }
   box-shadow: 0 12px 30px rgba(127,168,255,0.38);
 }
 
-/* Knapperne ligger side om side og brydes paent paa mobil */
+/* Knapperne ligger side om side */
 .cta-row {
   margin-top: 34px;
   display: flex;
@@ -429,33 +402,59 @@ nav.main-nav a:hover::after{ width:100%; }
   gap: 14px;
   justify-content: center;
 }
+
 .cta-row .cta { margin-top: 0; }
+
 @media(max-width:480px){
   .cta-row .cta { flex: 1 1 100%; padding: 15px 24px; }
 }
 
-/* SERVICES (sektionen lige under hero) */
+/* SERVICES */
 html { scroll-behavior: smooth; }
-@media(prefers-reduced-motion: reduce){ html { scroll-behavior: auto; } }
+
+@media(prefers-reduced-motion: reduce){
+  html { scroll-behavior: auto; }
+}
 
 .services-section {
   padding: 90px 20px;
-  /* samme dybde som services.html, så forsiden og servicesiden føles ens */
   background: linear-gradient(180deg, #0a0a0a 0%, #111 45%, #0a0a0a 100%);
   color: #fff;
   scroll-margin-top: 20px;
 }
-.services-header { text-align: center; max-width: 720px; margin: 0 auto 50px; }
-.services-header h2 { font-size: 2.2rem; margin: 0 0 12px; color: #e6f0ff; }
-.services-header p { font-size: 1.1rem; opacity: 0.8; margin: 0; }
 
-.services-wrap { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+.services-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.services-header h2 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+  color: #e6f0ff;
+}
+
+.services-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.services-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
 .service-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
+
 .premium-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -464,8 +463,11 @@ html { scroll-behavior: smooth; }
   margin: 0 auto;
   padding-top: 14px;
 }
+
 @media(max-width:860px){
-  .service-row, .premium-row { grid-template-columns: 1fr; }
+  .service-row, .premium-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .svc-card {
@@ -479,16 +481,21 @@ html { scroll-behavior: smooth; }
   overflow: hidden;
   transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
+
 .svc-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   border-color: #7fa8ff;
 }
+
 .svc-card.premium {
   border-color: rgba(255,215,0,0.25);
   box-shadow: 0 10px 30px rgba(255,215,0,0.08), 0 10px 25px rgba(0,0,0,0.4);
 }
-.svc-card.premium:hover { border-color: #ffd700; }
+
+.svc-card.premium:hover {
+  border-color: #ffd700;
+}
 
 .svc-img {
   width: 100%;
@@ -500,7 +507,8 @@ html { scroll-behavior: smooth; }
 
 .svc-ribbon {
   position: absolute;
-  top: 14px; left: 14px;
+  top: 14px;
+  left: 14px;
   z-index: 5;
   background: #7fa8ff;
   color: #0a0a0a;
@@ -512,7 +520,12 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.svc-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.svc-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
 .svc-eyebrow {
   font-size: 0.72rem;
@@ -522,16 +535,47 @@ html { scroll-behavior: smooth; }
   color: #7fa8ff;
   margin-bottom: 8px;
 }
-.svc-card.premium .svc-eyebrow { color: #ffd700; }
 
-.svc-body h3 { color: #fff; font-size: 1.25rem; margin: 0 0 8px; }
-.svc-body .desc { color: #bbb; font-size: 0.92rem; margin: 0 0 16px; flex: 1; }
+.svc-card.premium .svc-eyebrow {
+  color: #ffd700;
+}
 
-.svc-price { font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
-.svc-card.premium .svc-price { color: #ffd700; }
-.svc-price span { font-size: 0.78rem; font-weight: 500; color: #888; margin-left: 6px; }
+.svc-body h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
 
-.svc-ctas { display: flex; gap: 10px; }
+.svc-body .desc {
+  color: #bbb;
+  font-size: 0.92rem;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.svc-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.svc-card.premium .svc-price {
+  color: #ffd700;
+}
+
+.svc-price span {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #888;
+  margin-left: 6px;
+}
+
+.svc-ctas {
+  display: flex;
+  gap: 10px;
+}
+
 .svc-ctas a {
   flex: 1;
   text-align: center;
@@ -541,11 +585,31 @@ html { scroll-behavior: smooth; }
   text-decoration: none;
   transition: 0.2s;
 }
-.svc-ctas .btn-book { background: #7fa8ff; color: #0a0a0a; font-weight: 700; }
-.svc-card.premium .svc-ctas .btn-book { background: #ffd700; }
-.svc-ctas .btn-book:hover { filter: brightness(1.1); }
-.svc-ctas .btn-more { border: 1px solid #444; color: #ddd; font-weight: 600; }
-.svc-ctas .btn-more:hover { border-color: #fff; color: #fff; }
+
+.svc-ctas .btn-book {
+  background: #7fa8ff;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+.svc-card.premium .svc-ctas .btn-book {
+  background: #ffd700;
+}
+
+.svc-ctas .btn-book:hover {
+  filter: brightness(1.1);
+}
+
+.svc-ctas .btn-more {
+  border: 1px solid #444;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.svc-ctas .btn-more:hover {
+  border-color: #fff;
+  color: #fff;
+}
 
 .services-note {
   max-width: 700px;
@@ -557,11 +621,20 @@ html { scroll-behavior: smooth; }
   color: #bbb;
   font-size: 0.9rem;
 }
-.services-note a { color: #7fa8ff; font-weight: 700; }
+
+.services-note a {
+  color: #7fa8ff;
+  font-weight: 700;
+}
 
 @media(max-width:768px){
-  .services-section { padding: 60px 16px; }
-  .services-header h2 { font-size: 1.7rem; }
+  .services-section {
+    padding: 60px 16px;
+  }
+
+  .services-header h2 {
+    font-size: 1.7rem;
+  }
 }
 
 /* EXPLAINER */
@@ -571,8 +644,17 @@ html { scroll-behavior: smooth; }
   background: #0a0a0a;
   color: #fff;
 }
-.explainer h2 { font-size: 2rem; margin-bottom: 10px; }
-.explainer p { font-size: 1.1rem; margin-bottom: 50px; opacity: 0.85; }
+
+.explainer h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.explainer p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  opacity: 0.85;
+}
 
 .explainer-boxes {
   display: flex;
@@ -582,6 +664,7 @@ html { scroll-behavior: smooth; }
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .explainer-box {
   background: #111;
   border: 1px solid #222;
@@ -594,11 +677,16 @@ html { scroll-behavior: smooth; }
   align-items: center;
   transition: transform 0.3s, border-color 0.3s;
 }
+
 .explainer-box:hover {
   transform: translateY(-8px);
   border-color: #fff;
 }
-.explainer-icon { font-size: 3rem; margin-bottom: 20px; }
+
+.explainer-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 
 /* FOOTER */
 footer {
@@ -608,11 +696,11 @@ footer {
   font-size: 14px;
   color: #aaa;
 }
-.footerlinks a { 
-  color: rgb(149, 149, 149); 
+
+.footerlinks a {
+  color: rgb(149, 149, 149);
   padding: 5px;
 }
-
 
 .kunde-anmeldelser {
   text-align: center;
@@ -620,58 +708,54 @@ footer {
   color: black;
 }
 
-
-/*reviews*/
 /* REVIEWS */
-
-.reviews{
-margin-top:70px;
-text-align:center;
+.reviews {
+  margin-top: 70px;
+  text-align: center;
 }
 
-.reviews h2{
-font-size:2rem;
-margin-bottom:30px;
-color:#ffffff;
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 
-.review-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
 }
 
-.review{
-background:#f3f0f0;
-padding:25px;
-border-radius:14px;
-border:1px solid #222;
-transition:all .25s;
+.review {
+  background: #f3f0f0;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #222;
+  transition: all .25s;
 }
 
-.review:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+.review:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.review p{
-color:#000000;
-font-size:1rem;
+.review p {
+  color: #000000;
+  font-size: 1rem;
 }
 
-.review span{
-display:block;
-margin-top:10px;
-font-size:1.2rem;
-color:#ffd700;
+.review span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffd700;
 }
 
-.review h4{
-margin-top:10px;
-font-weight:500;
-color:#000000;
+.review h4 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #000000;
 }
-
 
 .before-after {
   text-align: center;
@@ -687,7 +771,6 @@ color:#000000;
 
 .before-after p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  /* place paragraph text inside a styled box */
   display: inline-block;
   padding: 3px 10px;
   margin-bottom: 3px;
@@ -721,8 +804,8 @@ color:#000000;
 }
 
 .ba-image-wrapper-simple img {
-  box-sizing: border-box; /* bevarer quirks-modens beregning, så billedet fylder præcis som før */
-  display: block;         /* fjerner baseline-mellemrummet som standard-mode ellers tilføjer */
+  box-sizing: border-box;
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -799,96 +882,91 @@ color:#000000;
   box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
 }
 
-
-/*kontakt*/
 /* CONTACT SECTION */
-
-.contact-section{
-padding:90px 20px;
-background:#0d0d0d;
-border-top:1px solid #222;
+.contact-section {
+  padding: 90px 20px;
+  background: #0d0d0d;
+  border-top: 1px solid #222;
 }
 
-.contact-container{
-max-width:1200px;
-margin:0 auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:start;
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
 }
 
-.contact-left h2{
-font-size:2.3rem;
-margin-bottom:15px;
+.contact-left h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
 }
 
-.contact-left p{
-color:#bbb;
-margin-bottom:25px;
-max-width:420px;
+.contact-left p {
+  color: #bbb;
+  margin-bottom: 25px;
+  max-width: 420px;
 }
 
-.contact-info p{
-margin:8px 0;
-font-size:1rem;
+.contact-info p {
+  margin: 8px 0;
+  font-size: 1rem;
 }
 
-.contact-info a{
-color:#fff;
-text-decoration:none;
-border-bottom:1px solid #444;
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
 }
 
-.contact-info a:hover{
-border-color:#fff;
+.contact-info a:hover {
+  border-color: #fff;
 }
 
-.contact-btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 35px;
-border:1px solid #fff;
-text-decoration:none;
-color:#fff;
-font-weight:600;
-transition:0.25s;
+.contact-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 35px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.25s;
 }
 
-.contact-btn:hover{
-background:#fff;
-color:#000;
+.contact-btn:hover {
+  background: #fff;
+  color: #000;
 }
-
 
 /* HOURS */
-
-.contact-right{
-background:#111;
-border:1px solid #222;
-border-radius:14px;
-padding:35px;
+.contact-right {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 35px;
 }
 
-.contact-right h3{
-margin-top:0;
-margin-bottom:20px;
-font-size:1.6rem;
+.contact-right h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
 }
 
-.hours{
-display:flex;
-flex-direction:column;
-gap:12px;
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.hour-row{
-display:flex;
-justify-content:space-between;
-border-bottom:1px solid #222;
-padding-bottom:8px;
-font-size:0.95rem;
-color:#ddd;
+.hour-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  padding-bottom: 8px;
+  font-size: 0.95rem;
+  color: #ddd;
 }
 
 .ba-container-border {
@@ -896,28 +974,28 @@ color:#ddd;
   border-radius: 16px;
   padding: 15px;
   margin: 10px;
-  }
+}
 
 /* CONTAINER FOR SEO OG FAQ SOM KOLONNER */
 .seo-faq-container {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  max-width: 1800px; /* øget bredde */
+  max-width: 1800px;
   margin: 60px auto;
   padding: 0 20px;
   flex-wrap: wrap;
 }
 
 .seo-text, .faq {
-  flex: 1 1 48%; /* øger bredden fra 45% til 48% */
-  padding: 25px; /* lidt ekstra padding for luft */
-  min-width: 400px; /* sikrer minimumsstørrelse på små skærme */
+  flex: 1 1 48%;
+  padding: 25px;
+  min-width: 400px;
 }
 
 /* SEO TEKST */
 .seo-text {
-  flex: 1 1 45%; /* tager cirka halvdelen af bredden */
+  flex: 1 1 45%;
   padding: 20px;
   background: #111;
   border: 1px solid #222;
@@ -1005,54 +1083,64 @@ color:#ddd;
   }
 }
 
-
-
 /* MOBILE */
-
 @media(max-width:768px){
 
-.contact-container{
-grid-template-columns:1fr;
-gap:40px;
-}
+  .contact-container {
+    grid-template-columns:1fr;
+    gap:40px;
+  }
 
-.contact-left{
-text-align:center;
-}
+  .contact-left {
+    text-align:center;
+  }
 
-.contact-left p{
-margin-left:auto;
-margin-right:auto;
-}
+  .contact-left p {
+    margin-left:auto;
+    margin-right:auto;
+  }
 
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content p { font-size: 1rem; }
-  .explainer-box { width: 80%; }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .explainer-box {
+    width: 80%;
+  }
+
 }
 
 @media(max-width:768px){
 
-  header{
+  header {
     padding: 15px 20px;
   }
 
-  header .site-name{
+  header .site-name {
     font-size: 0.95rem;
   }
 
-  .logo{
+  .logo {
     height: 44px;
   }
 
-  .hamburger{ display:flex; }
+  .hamburger {
+    display:flex;
+  }
 
-  nav.main-nav{
+  nav.main-nav {
     position:fixed;
-    top:0; right:0;
+    top:0;
+    right:0;
     height:100vh;
     width:min(78vw,300px);
     background:#0d0d0d;
@@ -1065,18 +1153,24 @@ margin-right:auto;
     transform:translateX(100%);
     transition:transform 0.3s ease;
   }
-  nav.main-nav.open{ transform:translateX(0); }
-  nav.main-nav a{ font-size:1.1em; }
 
-  .hero-content h1{
+  nav.main-nav.open {
+    transform:translateX(0);
+  }
+
+  nav.main-nav a {
+    font-size:1.1em;
+  }
+
+  .hero-content h1 {
     font-size: 2rem;
   }
 
-  .hero-content p{
+  .hero-content p {
     font-size: 1rem;
   }
 
-  .explainer-box{
+  .explainer-box {
     width:90%;
   }
 
@@ -1100,23 +1194,31 @@ margin-right:auto;
 }
 
 @media(max-width:420px){
-  header .site-name{ display:none; } /* på meget smalle skærme viger titlen for logo + menu-knap, så intet klemmes */
+  header .site-name {
+    display:none;
+  }
 }
 </style>
 </head>
+
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBXF9PM9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBXF9PM9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header>
   <img src="Billeder/svbbd_hvidtlogo.png" class="logo" width="1536" height="1024" alt="Svendborg Bildetail logo">
+
   <p class="site-name">Bilrengøring i Svendborg - Svendborg Bildetail</p>
+
   <button class="hamburger" id="hamburgerBtn" aria-label="Åbn menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+
   <nav class="main-nav" id="mainNav">
     <a href="services.html">Services</a>
     <a href="omos.html">Om os</a>
@@ -1124,28 +1226,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="privacy.html">Privacy</a>
   </nav>
 </header>
+
 <div class="nav-overlay" id="navOverlay"></div>
 
 <section class="hero">
+
   <video autoplay preload="none" muted playsinline poster="Billeder/porsche vask.png" class="hero-video top-video" id="heroVideo1"></video>
 
-<video autoplay preload="none" muted playsinline poster="Billeder/porsche vask.png" class="hero-video bottom-video" id="heroVideo2"></video>
+  <video autoplay preload="none" muted playsinline poster="Billeder/porsche vask.png" class="hero-video bottom-video" id="heroVideo2"></video>
+
   <div class="hero-content">
     <h1>Professionel bilrengøring i Svendborg</h1>
     <h2 class="hero-sub">Svendborg Bildetail – Mobil bilpleje</h2>
     <p>Indvendig rengøring · Udvendig vask · Fuld bildetailing</p>
+
     <div class="cta-row">
       <a href="https://svendborg-bildetail.planway.com/" class="cta cta-primary">Book nu</a>
       <a href="#services" class="cta">Se vores services</a>
     </div>
   </div>
+
 </section>
 
 <section class="services-section" id="services" aria-label="Vores services og priser">
+
   <div class="services-header">
     <h2>Vores services</h2>
-    <p>Fra en hurtig udvendig vask til en total makeover indvendigt og udvendigt.
-       Vi kører ud til dig i Svendborg, Tåsinge og Thurø.</p>
+    <p>
+      Fra en hurtig udvendig vask til en total makeover indvendigt og udvendigt.
+      Vi kører ud til dig i Svendborg, Tåsinge og Thurø.
+    </p>
   </div>
 
   <div class="services-wrap">
@@ -1155,11 +1265,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="svc-card">
         <img class="svc-img" src="Billeder/kort-udvendig.webp" width="760" height="430" loading="lazy" decoding="async" alt="Udvendig håndvask af bil i Svendborg">
+
         <div class="svc-body">
           <div class="svc-eyebrow">Udvendig</div>
           <h3>Udvendig vask</h3>
-          <p class="desc">Skånsom håndvask, fælgrens og vinduespuds. Til dig der vil have bilen ren og pæn uden det store.</p>
-          <div class="svc-price">Fra 375 kr<span>inkl. moms</span></div>
+
+          <p class="desc">
+            Skånsom håndvask, fælgrens og vinduespuds. Til dig der vil have bilen ren og pæn uden det store.
+          </p>
+
+          <div class="svc-price">
+            Fra 375 kr<span>inkl. moms</span>
+          </div>
+
           <div class="svc-ctas">
             <a href="https://svendborg-bildetail.planway.com/" class="btn-book">Book nu</a>
             <a href="udvendig-vask.html" class="btn-more">Læs mere</a>
@@ -1169,11 +1287,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="svc-card">
         <img class="svc-img" src="Billeder/kort-indvendig.webp" width="760" height="430" loading="lazy" decoding="async" alt="Indvendig rengøring af bilkabine i Svendborg">
+
         <div class="svc-body">
           <div class="svc-eyebrow">Indvendig · Standard</div>
           <h3>Indvendig rengøring</h3>
-          <p class="desc">Støvsugning, aftørring af paneler og rengøring af vinduer indefra. Frisk kabine, klar til hverdagen.</p>
-          <div class="svc-price">Fra 685 kr<span>inkl. moms</span></div>
+
+          <p class="desc">
+            Støvsugning, aftørring af paneler og rengøring af vinduer indefra. Frisk kabine, klar til hverdagen.
+          </p>
+
+          <div class="svc-price">
+            Fra 685 kr<span>inkl. moms</span>
+          </div>
+
           <div class="svc-ctas">
             <a href="https://svendborg-bildetail.planway.com/" class="btn-book">Book nu</a>
             <a href="interiør-rengøring.html" class="btn-more">Læs mere</a>
@@ -1183,12 +1309,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="svc-card">
         <span class="svc-ribbon">Mest populær</span>
+
         <img class="svc-img" src="Billeder/kort-fulldetail.webp" width="760" height="430" loading="lazy" decoding="async" alt="Full detail bilrengøring indvendigt og udvendigt i Svendborg">
+
         <div class="svc-body">
           <div class="svc-eyebrow">Full Detail · Standard</div>
           <h3>Full Detail</h3>
-          <p class="desc">Indvendig og udvendig rengøring i én pakke. Perfekt valg hvis du vil friske bilen op, både inde og ude.</p>
-          <div class="svc-price">Fra 1060 kr<span>inkl. moms</span></div>
+
+          <p class="desc">
+            Indvendig og udvendig rengøring i én pakke. Perfekt valg hvis du vil friske bilen op, både inde og ude.
+          </p>
+
+          <div class="svc-price">
+            Fra 1060 kr<span>inkl. moms</span>
+          </div>
+
           <div class="svc-ctas">
             <a href="https://svendborg-bildetail.planway.com/" class="btn-book">Book nu</a>
             <a href="full-detail.html" class="btn-more">Læs mere</a>
@@ -1203,11 +1338,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="svc-card premium">
         <img class="svc-img" src="Billeder/kort-premium-indvendig.webp" width="760" height="430" loading="lazy" decoding="async" alt="Premium indvendig bilrengøring med sæderens og læderbehandling">
+
         <div class="svc-body">
           <div class="svc-eyebrow">💎 Premium</div>
           <h3>Premium Indvendig</h3>
-          <p class="desc">Alt fra Standard plus sæderens, læderbehandling og plastikpleje.</p>
-          <div class="svc-price">Fra 1250 kr<span>inkl. moms</span></div>
+
+          <p class="desc">
+            Alt fra Standard plus sæderens, læderbehandling og plastikpleje.
+          </p>
+
+          <div class="svc-price">
+            Fra 1250 kr<span>inkl. moms</span>
+          </div>
+
           <div class="svc-ctas">
             <a href="https://svendborg-bildetail.planway.com/" class="btn-book">Book nu</a>
             <a href="interiør-rengøring-premium.html" class="btn-more">Læs mere</a>
@@ -1217,11 +1360,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="svc-card premium">
         <img class="svc-img" src="Billeder/kort-premium-fulldetail.webp" width="760" height="430" loading="lazy" decoding="async" alt="Premium full detail bilrengøring i Svendborg">
+
         <div class="svc-body">
           <div class="svc-eyebrow">💎 Premium</div>
           <h3>Premium Full Detail</h3>
-          <p class="desc">Den mest komplette pakke: alt fra Standard plus sæderens, lædervedligeholdelse og maksimal finish.</p>
-          <div class="svc-price">Fra 1560 kr<span>inkl. moms</span></div>
+
+          <p class="desc">
+            Den mest komplette pakke: alt fra Standard plus sæderens, lædervedligeholdelse og maksimal finish.
+          </p>
+
+          <div class="svc-price">
+            Fra 1560 kr<span>inkl. moms</span>
+          </div>
+
           <div class="svc-ctas">
             <a href="https://svendborg-bildetail.planway.com/" class="btn-book">Book nu</a>
             <a href="full-detail-premium.html" class="btn-more">Læs mere</a>
@@ -1237,170 +1388,255 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="services.html">Se alle services</a> ·
     <a href="bilstoerrelse.html">Hvilken størrelse er min bil?</a>
   </p>
+
 </section>
 
-
-
-
-
 <section class="explainer" aria-label="Hvordan bilrengøringen fungerer i Svendborg">
-  <h2><a href="mobil-bilpleje.html" style="color:inherit; text-decoration:none;">Mobil bilrengøring i Svendborg</a></h2>
+
+  <h2>
+    <a href="mobil-bilpleje.html" style="color:inherit; text-decoration:none;">
+      Mobil bilrengøring i Svendborg
+    </a>
+  </h2>
+
   <p>Sådan fungerer vores process:</p>
 
   <div class="explainer-boxes">
+
     <div class="explainer-box">
       <div class="explainer-icon">🗓️</div>
       <h3>1. Bestil tid</h3>
-      <p>Du booker nemt tid på mail eller via telefon. Vi kommer til dig på aftalt sted og tidspunkt.</p>
+      <p>
+        Du booker nemt tid på mail eller via telefon. Vi kommer til dig på aftalt sted og tidspunkt.
+      </p>
     </div>
+
     <div class="explainer-box">
       <div class="explainer-icon">🚗</div>
       <h3>2. Vi kommer ud</h3>
-      <p>Vores team kommer til dig med alt udstyr og professionelle rengøringsprodukter. Der skal blot være adgang til vand og el.</p>
+      <p>
+        Vores team kommer til dig med alt udstyr og professionelle rengøringsprodukter. Der skal blot være adgang til vand og el.
+      </p>
     </div>
+
     <div class="explainer-box">
       <div class="explainer-icon">✨</div>
       <h3>3. Fuld bilpleje</h3>
-      <p>Vi rengør bilen grundigt indvendigt og udvendigt, så den fremstår skinnende og velplejet.</p>
+      <p>
+        Vi rengør bilen grundigt indvendigt og udvendigt, så den fremstår skinnende og velplejet.
+      </p>
     </div>
+
     <a href="https://svendborg-bildetail.planway.com/" class="cta">Book nu</a>
+
   </div>
 </section>
 
-
-
 <section class="reviews">
 
-<h2>Hvad siger vores kunder?</h2>
+  <h2>Hvad siger vores kunder?</h2>
 
-<div class="review-grid">
+  <div class="review-grid">
 
-<div class="review">
-<p>
-"Super professionel og pålidelig bilrengøring. Bilen kom tilbage skinnende ren både indvendigt og udvendigt, og servicen var hurtig. Kan klart anbefales."
-</p>
-<span>★★★★★</span>
-<h4>– Jacob, Svendborg</h4>
-</div>
+    <div class="review">
+      <p>
+        "Super professionel og pålidelig bilrengøring. Bilen kom tilbage skinnende ren både indvendigt og udvendigt, og servicen var hurtig. Kan klart anbefales."
+      </p>
+      <span>★★★★★</span>
+      <h4>– Jacob, Svendborg</h4>
+    </div>
 
-<div class="review">
-<p>
-"Jeg kan på det varmeste anbefale de gutter her,- de er venlige, effektive, arbejdsomme og yder en ekstrem professionel service. 
-Tøv ikke med at tage fat i dem 🤝 det kommer vi ihvertfald til igen, når bilen trænger til en tur mere.
-Stærkt arbejde 👌"
-</p>
-<span>★★★★★</span>
-<h4>– Kenneth, Tved</h4>
-</div>
+    <div class="review">
+      <p>
+        "Jeg kan på det varmeste anbefale de gutter her,- de er venlige, effektive, arbejdsomme og yder en ekstrem professionel service.
+        Tøv ikke med at tage fat i dem 🤝 det kommer vi ihvertfald til igen, når bilen trænger til en tur mere.
+        Stærkt arbejde 👌"
+      </p>
+      <span>★★★★★</span>
+      <h4>– Kenneth, Tved</h4>
+    </div>
 
-<div class="review">
-<p>
-"Helt utroligt flot resultat. Vi kan derfor sende vores bedste anbefalinger og det er absolut ikke sidste gang at de bliver booket. "
-</p>
-<span>★★★★★</span>
-<h4>– Ulrik, Svendborg</h4>
-</div>
+    <div class="review">
+      <p>
+        "Helt utroligt flot resultat. Vi kan derfor sende vores bedste anbefalinger og det er absolut ikke sidste gang at de bliver booket. "
+      </p>
+      <span>★★★★★</span>
+      <h4>– Ulrik, Svendborg</h4>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 <section class="before-after" aria-label="Før og efter bilrengøring">
+
   <h2>Se forskellen – Før &amp; Efter</h2>
-  <p class="ba-subtitle">Her kan du se effekten af vores professionelle bilrengøring.</p>
+
+  <p class="ba-subtitle">
+    Her kan du se effekten af vores professionelle bilrengøring.
+  </p>
 
   <div class="ba-container">
+
     <div class="ba-container-border">
-    <div class="ba-images">
-      <div class="ba-image-wrapper-simple">
-        <img src="Billeder/foer1.webp" width="1179" height="635" loading="lazy" decoding="async" alt="Beskidt bilkabine før indvendig bilrengøring i Svendborg">
-        <p>FØR</p>
+
+      <div class="ba-images">
+
+        <div class="ba-image-wrapper-simple">
+          <img src="Billeder/foer1.webp" width="1179" height="635" loading="lazy" decoding="async" alt="Beskidt bilkabine før indvendig bilrengøring i Svendborg">
+          <p>FØR</p>
+        </div>
+
+        <div class="ba-image-wrapper-simple">
+          <img src="Billeder/efter2.webp" width="1179" height="644" loading="lazy" decoding="async" alt="Samme bilkabine efter indvendig bilrengøring hos Svendborg Bildetail">
+          <p>EFTER</p>
+        </div>
+
       </div>
-      <div class="ba-image-wrapper-simple">
-        <img src="Billeder/efter2.webp" width="1179" height="644" loading="lazy" decoding="async" alt="Samme bilkabine efter indvendig bilrengøring hos Svendborg Bildetail">
-        <p>EFTER</p>
-      </div>
+
     </div>
-    </div>
+
     <div class="ba-container-border">
-    <div class="ba-images">
-      <div class="ba-image-wrapper-simple">
-        <img src="Billeder/foer3.webp" width="1179" height="663" loading="lazy" decoding="async" alt="Plettet bilsæde før rengøring i Svendborg">
-        <p>FØR</p>
+
+      <div class="ba-images">
+
+        <div class="ba-image-wrapper-simple">
+          <img src="Billeder/foer3.webp" width="1179" height="663" loading="lazy" decoding="async" alt="Plettet bilsæde før rengøring i Svendborg">
+          <p>FØR</p>
+        </div>
+
+        <div class="ba-image-wrapper-simple">
+          <img src="Billeder/efter3.webp" width="1179" height="663" loading="lazy" decoding="async" alt="Samme bilsæde efter professionel sæderens i Svendborg">
+          <p>EFTER</p>
+        </div>
+
       </div>
-      <div class="ba-image-wrapper-simple">
-        <img src="Billeder/efter3.webp" width="1179" height="663" loading="lazy" decoding="async" alt="Samme bilsæde efter professionel sæderens i Svendborg">
-        <p>EFTER</p>
-      </div>
+
     </div>
+
   </div>
-  </div>
+
 </section>
 
 <section class="vores-mission">
-<div class="mission-content">
-<div class="mission-text">
-<h2>Vores mission</h2>
-<p>Hos Svendborg Bildetail er vores mission at levere professionel bilpleje, der giver din bil nyt liv. Vi ønsker at gøre det nemt og bekvemt for bilejere i Svendborg at få en skinnende ren bil, både indvendigt og udvendigt. </p>
-</div>
-<div class="mission-images">
-<img src="Billeder/seb-hjul.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Professionel hjul- og fælgrengøring i Svendborg">
-<img src="Billeder/flot-bag.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Bilkabine efter fuld bildetailing i Svendborg">
-</div>
-</div>
+
+  <div class="mission-content">
+
+    <div class="mission-text">
+      <h2>Vores mission</h2>
+      <p>
+        Hos Svendborg Bildetail er vores mission at levere professionel bilpleje, der giver din bil nyt liv. Vi ønsker at gøre det nemt og bekvemt for bilejere i Svendborg at få en skinnende ren bil, både indvendigt og udvendigt.
+      </p>
+    </div>
+
+    <div class="mission-images">
+      <img src="Billeder/seb-hjul.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Professionel hjul- og fælgrengøring i Svendborg">
+      <img src="Billeder/flot-bag.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Bilkabine efter fuld bildetailing i Svendborg">
+    </div>
+
+  </div>
+
 </section>
 
 <section class="seo-faq-container">
+
   <div class="seo-text">
-  <h2>Bilrengøring i Svendborg, Tåsinge og Thurø</h2>
-  <p>Hos <strong>Svendborg Bildetail</strong> tilbyder vi professionel bilrengøring i Svendborg og omegn. Vi specialiserer os i <strong><a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a></strong>, <strong><a href="udvendig-vask.html" style="color: white;">udvendig bilvask</a></strong> og <strong><a href="full-detail.html" style="color: white;">fuld bildetailing</a></strong>, så din bil fremstår skinnende ren og velplejet. Vores mobile service gør det nemt – vi kommer til dig, uanset om du bor i Svendborg, på Tåsinge eller Thurø.</p>
 
-  <h3>Professionel indvendig bilrengøring</h3>
-  <p>Vi tilbyder grundig <a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a>, der inkluderer støvsugning af sæder og gulve, rengøring af instrumentbord og paneler samt pleje af tekstil og læderoverflader. Din bil vil efter vores behandling føles frisk, ren og velholdt.</p>
+    <h2>Bilrengøring i Svendborg, Tåsinge og Thurø</h2>
 
-  <h3>Udvendig bilvask og detailing</h3>
-  <p>Vores udvendige bilvask fjerner effektivt snavs, salt og skidt fra lakken, hjul og karrosseri. </p>
+    <p>
+      Hos <strong>Svendborg Bildetail</strong> tilbyder vi professionel bilrengøring i Svendborg og omegn. Vi specialiserer os i
+      <strong><a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a></strong>,
+      <strong><a href="udvendig-vask.html" style="color: white;">udvendig bilvask</a></strong> og
+      <strong><a href="full-detail.html" style="color: white;">fuld bildetailing</a></strong>,
+      så din bil fremstår skinnende ren og velplejet. Vores mobile service gør det nemt – vi kommer til dig, uanset om du bor i Svendborg, på Tåsinge eller Thurø.
+    </p>
 
-  <h3>Mobil bilpleje – vi kommer til dig</h3>
-  <p>Med vores mobile bilrengøring sparer du tid og besvær. Vi medbringer alt udstyr og professionelle rengøringsmidler, og alt du skal sørge for, er adgang til vand og el.</p>
+    <h3>Professionel indvendig bilrengøring</h3>
 
-  
-</div>
-  <div class="faq">
-    <h2>Ofte stillede spørgsmål</h2>
-    <h3>Hvor lang tid tager en bilrengøring?</h3>
-    <p>En typisk bilrengøring tager mellem 2 og 3 timer, afhængig af bilens beskidthed, størrelse og tilkøb.</p>
-    <h3>Kører I ud til kunden?</h3>
-    <p>Ja, vi tilbyder mobil bilrengøring i Svendborg, Tåsinge, Thurø og omegn.</p>
-    <h3>Hvad koster bilrengøring?</h3>
-    <p>Prisen afhænger af hvilken service du vælger. Vores priser for udvendig vask starter fra 375,- kr. Vores priser for indvendig rengøring starter fra 685,- kr</p>
+    <p>
+      Vi tilbyder grundig <a href="interiør-rengøring.html" style="color: white;">indvendig bilrengøring</a>, der inkluderer støvsugning af sæder og gulve, rengøring af instrumentbord og paneler samt pleje af tekstil og læderoverflader. Din bil vil efter vores behandling føles frisk, ren og velholdt.
+    </p>
+
+    <h3>Udvendig bilvask og detailing</h3>
+
+    <p>
+      Vores udvendige bilvask fjerner effektivt snavs, salt og skidt fra lakken, hjul og karrosseri.
+    </p>
+
+    <h3>Mobil bilpleje – vi kommer til dig</h3>
+
+    <p>
+      Med vores mobile bilrengøring sparer du tid og besvær. Vi medbringer alt udstyr og professionelle rengøringsmidler, og alt du skal sørge for, er adgang til vand og el.
+    </p>
+
   </div>
+
+  <div class="faq">
+
+    <h2>Ofte stillede spørgsmål</h2>
+
+    <h3>Hvor lang tid tager en bilrengøring?</h3>
+    <p>
+      En typisk bilrengøring tager mellem 2 og 3 timer, afhængig af bilens beskidthed, størrelse og tilkøb.
+    </p>
+
+    <h3>Kører I ud til kunden?</h3>
+    <p>
+      Ja, vi tilbyder mobil bilrengøring i Svendborg, Tåsinge, Thurø og omegn.
+    </p>
+
+    <h3>Hvad koster bilrengøring?</h3>
+    <p>
+      Prisen afhænger af hvilken service du vælger. Vores priser for udvendig vask starter fra 375,- kr. Vores priser for indvendig rengøring starter fra 685,- kr
+    </p>
+
+  </div>
+
 </section>
 
-
-<!--kontakt*/-->
+<!-- CONTACT SECTION -->
 <section class="contact-section">
+
   <div class="contact-container">
 
     <div class="contact-left">
+
       <h2>Kontakt os</h2>
-      <p>Har du spørgsmål eller vil du booke en tid til bilrengøring?  
-      Kontakt os – vi svarer hurtigt.</p>
+
+      <p>
+        Har du spørgsmål eller vil du booke en tid til bilrengøring?
+        Kontakt os – vi svarer hurtigt.
+      </p>
 
       <div class="contact-info">
-        <p><strong>Telefon:</strong> <a href="tel:+4529729695">29 72 96 95</a></p>
-        <p><strong>Email:</strong> <a href="mailto:svendborgbildetail@gmail.com">svendborgbildetail@gmail.com</a></p>
-        <p><strong>Område:</strong> Svendborg & Omegn</p>
+
+        <p>
+          <strong>Telefon:</strong>
+          <a href="tel:+4529729695">29 72 96 95</a>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:svendborgbildetail@gmail.com">svendborgbildetail@gmail.com</a>
+        </p>
+
+        <p>
+          <strong>Område:</strong> Svendborg &amp; Omegn
+        </p>
+
       </div>
 
       <a href="kontakt.html" class="contact-btn">Kontakt os</a>
+
     </div>
 
-
     <div class="contact-right">
+
       <h3>Telefontider</h3>
 
       <div class="hours">
+
         <div class="hour-row">
           <span>Mandag</span>
           <span>14:00 – 18:00</span>
@@ -1435,61 +1671,96 @@ Stærkt arbejde 👌"
           <span>Søndag</span>
           <span>Lukket</span>
         </div>
+
       </div>
     </div>
 
   </div>
+
 </section>
-
-
-
 
 <footer>
 
   <div class="social-links" style="margin-bottom: 20px;">
-  <a href="https://www.facebook.com/profile.php?id=61580811698012" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-  </a>
-  <a href="https://www.instagram.com/svendborgbildetail" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-  </a>
-  <a href="https://www.tiktok.com/@svendborgbildetail" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.78a4.85 4.85 0 0 1-1-.09z"/></svg>
-  </a>
-</div>
+
+    <a href="https://www.facebook.com/profile.php?id=61580811698012" target="_blank" rel="noopener" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+
+    </a>
+
+    <a href="https://www.instagram.com/svendborgbildetail" target="_blank" rel="noopener" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+
+    </a>
+
+    <a href="https://www.tiktok.com/@svendborgbildetail" target="_blank" rel="noopener" aria-label="TikTok" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444; border-radius: 50%; color: #fff; text-decoration: none; margin: 0 6px; font-size: 1.3rem; transition: border-color 0.2s, color 0.2s;">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.15 8.15 0 0 0 4.77 1.52V6.78a4.85 4.85 0 0 1-1-.09z"/>
+      </svg>
+
+    </a>
+
+  </div>
 
   <div class="footerlinks">
+
     <a href="udvendig-vask.html">Udvendig bilvask i Svendborg</a>
     <a href="interiør-rengøring.html">Indvendig bilrengøring i Svendborg</a>
     <a href="full-detail.html">Fuld bildetailing i Svendborg</a>
     <a href="mobil-bilpleje.html">Mobil bilpleje i Svendborg</a>
     <a href="interiør-rengøring-premium.html">Premium indvendig rengøring i Svendborg</a>
     <a href="full-detail-premium.html">Full detail premium i Svendborg</a>
+
   </div>
+
   <p>© 2026 Svendborg Bildetail - Bilklargøring i Svendborg</p>
   <p>CVR: 46 35 57 84</p>
-  <p class="footerlinks">Hjemmeside lavet af <a href="https://www.sonderbymarketing.dk">SONDERBY MARKETING</a></p>
+
+  <p class="footerlinks">
+    Hjemmeside lavet af
+    <a href="https://www.sonderbymarketing.dk">SONDERBY MARKETING</a>
+  </p>
+
 </footer>
 
 <script>
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mainNav = document.getElementById('mainNav');
   const navOverlay = document.getElementById('navOverlay');
+
   function toggleNav(){
     const isOpen = mainNav.classList.toggle('open');
+
     navOverlay.classList.toggle('open', isOpen);
     hamburgerBtn.classList.toggle('open', isOpen);
     hamburgerBtn.setAttribute('aria-expanded', isOpen);
   }
+
   hamburgerBtn.addEventListener('click', toggleNav);
+
   navOverlay.addEventListener('click', toggleNav);
+
   mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => { if (mainNav.classList.contains('open')) toggleNav(); });
+    link.addEventListener('click', () => {
+      if (mainNav.classList.contains('open')) {
+        toggleNav();
+      }
+    });
   });
 </script>
 
 <!-- VIDEO SCRIPT -->
- <script>
+<script>
+
 const videos = [
   "video/prewash.mp4",
   "video/hej.mp4",
@@ -1519,14 +1790,17 @@ let video1 = document.getElementById("heroVideo1");
 let video2 = document.getElementById("heroVideo2");
 
 function getNextVideo() {
-  if (queue.length === 0) shuffleVideos();
+  if (queue.length === 0) {
+    shuffleVideos();
+  }
+
   return queue.pop();
 }
 
-// Sikrer lyd er slået fra på begge elementer via JS-egenskaben (ikke kun HTML-attributten),
-// da nogle mobilbrowsere kan kræve dette for at tillade autoplay af video sat dynamisk.
+// Sikrer lyd er slået fra på begge elementer via JS-egenskaben
 video1.muted = true;
 video1.defaultMuted = true;
+
 video2.muted = true;
 video2.defaultMuted = true;
 
@@ -1534,30 +1808,39 @@ video2.defaultMuted = true;
 video1.src = getNextVideo();
 video1.load();
 video1.style.opacity = 1;
+
 video1.play().catch((err) => {
-  // Hvis autoplay blokeres (fx iOS' "Lavt strømforbrug"), forbliver poster-billedet
-  // synligt i stedet for en tom/sort boks, så siden stadig ser rigtig ud.
   console.error("Video kunne ikke autoplaye:", err);
 });
 
 function scheduleNextVideo(current, next) {
+
   // Start fade 2 sek før videoen slutter
-  const fadeTime = 2; // sekunder
+  const fadeTime = 2;
   const duration = current.duration;
 
   if (isNaN(duration)) {
-    // Hvis duration ikke er loadet endnu, vent 0.5s og prøv igen
-    setTimeout(() => scheduleNextVideo(current, next), 500);
+
+    setTimeout(() => {
+      scheduleNextVideo(current, next);
+    }, 500);
+
     return;
   }
 
   const timeToFade = (duration - fadeTime) * 1000;
+
   setTimeout(() => {
+
     // Start næste video bagved
-   next.muted = true;
-next.src = getNextVideo();
-next.load();
-next.play().catch((err) => console.error("Video kunne ikke autoplaye:", err));
+    next.muted = true;
+    next.src = getNextVideo();
+    next.load();
+
+    next.play().catch((err) => {
+      console.error("Video kunne ikke autoplaye:", err);
+    });
+
     next.style.opacity = 0;
 
     // Fade
@@ -1565,6 +1848,7 @@ next.play().catch((err) => console.error("Video kunne ikke autoplaye:", err));
     current.style.transition = 'opacity 2s ease-in-out';
 
     setTimeout(() => {
+
       next.style.opacity = 1;
       current.style.opacity = 0;
 
@@ -1573,12 +1857,34 @@ next.play().catch((err) => console.error("Video kunne ikke autoplaye:", err));
 
       // Sæt schedule for næste skift
       scheduleNextVideo(video1, video2);
-    }, 50); // kort delay så transition registreres
+
+    }, 50);
+
   }, timeToFade);
 }
 
 // Start loop
 scheduleNextVideo(video1, video2);
+
 </script>
 
-<iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v4.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe></body></html>
+<iframe
+  name="__uspapiLocator"
+  tabindex="-1"
+  role="presentation"
+  aria-hidden="true"
+  title="Blank"
+  style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;">
+</iframe>
+
+<iframe
+  tabindex="-1"
+  role="presentation"
+  aria-hidden="true"
+  title="Blank"
+  src="https://consentcdn.cookiebot.com/sdk/bc-v4.min.html"
+  style="position: absolute; width: 1px; height: 1px; top: -9999px;">
+</iframe>
+
+</body>
+</html>
